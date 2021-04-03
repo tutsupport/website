@@ -1,4 +1,4 @@
-#st-header-wrapper,#st-header-wrappers
+#st-header-wrapper
 {
 	box-shadow:0 1px 0 rgba(0,0,0,.05), 0 3px 3px rgba(0,0,0,.05);
 	border-bottom:2px dashed #28b8d0;
@@ -17,7 +17,7 @@
                     margin:0 auto;
                     height:55px;
                     padding:10px 0;
-                    max-width:1200px;
+                    /*max-width:1200px;*/
                     position:relative;
                     text-align:center
                 }
