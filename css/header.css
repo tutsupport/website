@@ -950,8 +950,3 @@ body#layout .syt-main-container{padding:0}
 #Header1 h1 a{display:inline-block;}
 
 #Header1 img{height:30px;margin:10px 0;}
-
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
-{
-	display:block;
-}
