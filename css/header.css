@@ -366,6 +366,8 @@
 	width:22px;
 	height:22px;
 }
+
+.main-wrapper .widget{margin-bottom:15px}
 #syt-backer .syt-list-label-widget-content li.syt-search:hover
 {
 	background:none;
