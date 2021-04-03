@@ -3,14 +3,14 @@
 	float:left;
 }
 
-#syt-backer .syt-header .syt-BlogSearch,
+#syt-backer .syt-header .BlogSearch,
 #syt-backer .syt-header .syt-LinkList
 {
 	display:inline-block;
 	position:relative;
 }
 
-#syt-backer .syt-header .syt-BlogSearch
+#syt-backer .syt-header .BlogSearch
 {
 	margin:0 5px;
 	width:60%;
@@ -48,7 +48,7 @@
 	color:$(posts.background.color);
 }
 
-#syt-backer .syt-BlogSearch .syt-results-content
+#syt-backer .BlogSearch .syt-results-content
 {
 	position:absolute;
 	top:45px;
@@ -61,7 +61,7 @@
 	background-clip:padding-box;
 }
 
-#syt-backer .syt-BlogSearch .syt-results-content .syt-dropdown
+#syt-backer .BlogSearch .syt-results-content .syt-dropdown
 {
 	overflow:hidden;
 	position:absolute;
@@ -74,20 +74,20 @@
 	transform:translateX(-15%);
 }
 
-#syt-backer .syt-BlogSearch .syt-results-content ul
+#syt-backer .BlogSearch .syt-results-content ul
 {
 	max-height:425px;
 	overflow-x:hidden;
 	overflow-y:auto;
 }
 
-#syt-backer .syt-BlogSearch .syt-results-content ul li
+#syt-backer .BlogSearch .syt-results-content ul li
 {
 	line-height:unset;
 	list-style:none;
 }
 
-#syt-backer .syt-BlogSearch .syt-results-content ul li a
+#syt-backer .BlogSearch .syt-results-content ul li a
 {
 	display:block;
 	padding:0 15px;
@@ -99,14 +99,14 @@
 	text-overflow:ellipsis;
 }
 
-#syt-backer .syt-BlogSearch .syt-results-content ul li svg
+#syt-backer .BlogSearch .syt-results-content ul li svg
 {
 	width:23px;
 	height:23px;
 	margin-right:15px;
 }
 
-#syt-backer .syt-BlogSearch .syt-clear-text
+#syt-backer .BlogSearch .syt-clear-text
 {
 	width:40px;
 	border:0;
@@ -120,7 +120,7 @@
 	outline:none;
 }
 
-#syt-backer .syt-BlogSearch .syt-clear-text:before
+#syt-backer .BlogSearch .syt-clear-text:before
 {
 	font-family:Material Icons;
 	content:'\e5cd';
@@ -133,7 +133,7 @@
 .syt-night-mode #footer,
 .syt-night-mode #syt-backer .syt-list-label-widget-content,
 .syt-night-mode .syt-dds-menu,
-.syt-night-mode #syt-backer .syt-BlogSearch .syt-results-content,
+.syt-night-mode #syt-backer .BlogSearch .syt-results-content,
 .syt-night-mode .syt-tb-menu,
 .syt-night-mode .syt-post-button-container .syt-share-menu
 {
@@ -375,7 +375,7 @@
 .syt-slider:before{position:absolute;content:"";height:20px;width:20px;left:0;bottom:-2px;background-color:#aaa;box-shadow:0 0 1px #aaa;-webkit-transition:.4s;transition:.4s;border-radius:50%}
 .syt-slider.checked{background-color:$(body.text.color)}
 .syt-slider.checked:before{-webkit-transform:translateX(20px);-ms-transform:translateX(20px);transform:translateX(20px)}
-body#layout .syt-BlogSearch,body#layout #HTML2,body#layout #footer{display:none}
+body#layout .BlogSearch,body#layout #HTML2,body#layout #footer{display:none}
 .syt-recent-comments .loading.load{position:relative;height:100px}
 .syt-recent-comments.spinner:before{top:47%;left:45%}
 .syt-recent-comments .loading.spinner:before{top:40%;left:45%}
@@ -526,7 +526,7 @@ body#layout .syt-main-container{padding:0}
 
 @media screen and (max-width:860px)
 {
-	#syt-backer .syt-header .syt-BlogSearch
+	#syt-backer .syt-header .BlogSearch
 	{
 		width:55%;
 	}
@@ -534,7 +534,7 @@ body#layout .syt-main-container{padding:0}
 	{
 		width:50px;
 	}
-	#syt-backer .syt-BlogSearch .syt-clear-text
+	#syt-backer .BlogSearch .syt-clear-text
 	{
 		right:50px;
 	}
@@ -625,7 +625,7 @@ body#layout .syt-main-container{padding:0}
 	{
 		padding:15px;
 	}
-	#syt-backer .syt-header .syt-BlogSearch
+	#syt-backer .syt-header .BlogSearch
 	{
 		width:50%;
 	}
@@ -644,21 +644,21 @@ body#layout .syt-main-container{padding:0}
 	{
 		width:125px;
 	}
-	#syt-backer .syt-header .syt-BlogSearch
+	#syt-backer .syt-header .BlogSearch
 	{
 		width:56%;
 	}
 }
 @media screen and (max-width:684px)
 {
-	#syt-backer .syt-header .syt-BlogSearch
+	#syt-backer .syt-header .BlogSearch
 	{
 		width:52%;
 	}
 }
 @media screen and (max-width:640px)
 {
-	#syt-backer .syt-header .syt-BlogSearch
+	#syt-backer .syt-header .BlogSearch
 	{
 		width:48%;
 	}
@@ -669,7 +669,7 @@ body#layout .syt-main-container{padding:0}
 	{
 		width:auto;
 	}
-	#syt-backer .syt-header .syt-BlogSearch
+	#syt-backer .syt-header .BlogSearch
 	{
 		display:none;
 	}
@@ -763,7 +763,7 @@ body#layout .syt-main-container{padding:0}
 	{
 		padding:15px;
 	}
-	#syt-backer .syt-header .syt-BlogSearch
+	#syt-backer .syt-header .BlogSearch
 	{
 		width:50%;
 	}
