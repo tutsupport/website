@@ -37,7 +37,7 @@
 	display:inline-block;
 	height:50px;
 }
-
+.qc_top .widget,.qc_bottom .widget{float:left;width:100%;margin-bottom:15px}
 #syt-backer .syt-backer-right .syt-follow
 {
 	background:#ff0000;
