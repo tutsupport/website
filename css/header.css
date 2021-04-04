@@ -261,7 +261,7 @@
 .bg-photo-container .video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%}
 
 #video-player{background-color:var(posts-background-color);float:left;width:70%;height:100%}
-#video-player{width:100%}
+#video-player{width:65%}
 
 .video-header{float:left;width:100%;display:block;position:relative;margin:0 0 15px 0}
 .video-header{margin:0}
