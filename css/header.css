@@ -253,13 +253,15 @@
 #related-posts::-webkit-scrollbar{width:0px;background-color:transparent}
 #related-posts::-webkit-scrollbar-thumb{background-color:transparent}
 #related-posts::-webkit-scrollbar-track{background-color:transparent}
+
 .video-container{position:relative;padding-bottom:56.25%}
 .video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%}
-.post-body .video-container{position:relative;padding-bottom:56.25%}
-.post-body .video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+
+.bg-photo-container .video-container{position:relative;padding-bottom:56.25%}
+.bg-photo-container .video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%}
 
 #video-player{background-color:var(posts-background-color);float:left;width:70%;height:100%}
 #video-player{width:100%}
 
-.post-header{float:left;width:100%;display:block;position:relative;margin:0 0 15px 0}
-.post-header{margin:0}
+.video-header{float:left;width:100%;display:block;position:relative;margin:0 0 15px 0}
+.video-header{margin:0}
