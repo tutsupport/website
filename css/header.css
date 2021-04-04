@@ -1,3 +1,11 @@
+
+
+:root
+{
+    --posts-background-color:#ffffff;
+}
+
+
 #st-header-wrapper
 {
 	box-shadow:0 1px 0 rgba(0,0,0,.05), 0 3px 3px rgba(0,0,0,.05);
@@ -163,5 +171,95 @@
                 button.search-submit:before
                 {
                     font-family:FontAwesome;
-                    content:&#39;\f002&#39;
+                    content:"\f002";
                 }
+
+
+				@media screen and (max-width:600px)
+                {
+					#backer .header{width:auto}
+					#backer .header .BlogSearch{display:none}
+					#backer .list-label-widget-content li.search{display:block}
+					#backer .Label button{margin-right:5px}
+					.blog-posts .post,.PopularPosts ul li,#related-posts ul li,#recent-posts ul li{width:50%}
+					.footer-copyright.main-container{float:left;width:100%;display:block;text-align:center}
+					.footer-copyright .widget{width:100%}
+					.footer-copyright .socialList{display:block;float:none;padding-top:8px}
+                }
+
+                @media screen and (max-width:768px){
+						#backer .main-container{padding:0 15px}
+						.footer-copyright.main-container{padding:15px}
+						#backer .header .BlogSearch{width:50%}
+						.blog-posts .post,.PopularPosts ul li,#related-posts ul li,#recent-posts ul li{width:33.33%}
+                }
+                @media (max-width:1920px){#related-posts{height:645px}}
+                @media (max-width:1440px){#related-posts{height:480px;}}
+                @media (max-width:1366px){#related-posts{height:457px}}
+                @media (max-width:1280px){
+                    .main-container{padding:0 5%}
+                    .footer-copyright.main-container{padding:15px 5%}
+                    #related-posts{height:448px}
+                }
+                @media screen and (max-width:1128px){
+                .main-container{padding:0 20px}
+                .footer-copyright.main-container{padding:15px 20px}
+                #related-posts{height:428px}
+                }
+                @media screen and (max-width:1024px){
+                .main-container{padding:0}
+                #backer .main-container{padding:0 20px}
+                .au-menu .dropdown:after{content:unset}
+                #related-posts{height:402px}
+                }
+                @media screen and (max-width:960px){
+                .blog-posts .post,.PopularPosts ul li{width:25%}
+                #related-posts{height:378px}
+                }
+                @media screen and (max-width:860px){
+                #backer .header .BlogSearch{width:55%}
+                .peekar button{width:50px}
+                #backer .BlogSearch .clear-text{right:50px}
+                .post-header{margin:0}
+                #video-player{width:100%}
+                #related-posts{width:100%;height:unset;overflow:unset;margin:15px 0;padding:15px 15px 0 15px}
+                #related-posts ul,#recent-posts ul{float:none;width:unset;margin:0 -7.5px}
+                #related-posts ul li,#recent-posts ul li{float:none;padding:0 7.5px 15px 7.5px;width:25%;display:inline-block;vertical-align:top;position:relative}
+                #related-posts ul li:last-child,#recent-posts ul li:last-child{padding:0 7.5px 15px 7.5px}
+                #related-posts .post-thumb,#recent-posts .post-thumb{width:100%;margin:0}
+                #related-posts .post-title,#recent-posts .post-title{float:left;width:100%;display:block;padding-top:10px;font-size:15px}
+                #related-posts .post-meta,#recent-posts .post-meta{float:left;width:100%;display:block}
+                .post-container{background-color:unset;padding:0}
+                #article-body{background-color:var(posts-background-color);width:100%;padding:15px;margin-bottom:15px}
+                #recent-posts{background-color:var(posts-background-color);width:100%;padding:15px 15px 0 15px}
+                .night-mode #article-body,.night-mode #recent-posts{background-color:#3c4043}
+                }
+#related-posts h3,#recent-posts h3{font-size:15px;font-weight:bold;text-transform:uppercase;margin-bottom:15px;padding-bottom:10px;border-bottom:3px solid rgba(0,0,0,0.12);position:relative}
+#related-posts h3 span,#recent-posts h3 span{border-bottom:3px solid #365899;padding-bottom:10px}
+#related-posts ul,#recent-posts ul,#related-posts ul li,#recent-posts ul li{float:left;width:100%}
+#related-posts ul li,#recent-posts ul li{padding-bottom:12px}
+#related-posts ul li:last-child,#recent-posts ul li:last-child{padding:0}
+#related-posts .post-thumb,#recent-posts  .post-thumb{float:left;width:45%;margin-right:12px}
+#related-posts .post-thumb a,#recent-posts .post-thumb a{display:flex;position:relative;padding-bottom:56.25%}
+#related-posts .post-thumb img,#recent-posts .post-thumb img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+#related-posts .duration_video,#recent-posts .duration_video{position:absolute;left:5px;bottom:5px;font-size:13px;padding:2px 5px;text-align:center;border-radius:2px;background:#000;color:var(posts-background-color)}
+#related-posts .post-title,#recent-posts .post-title{display:table;font-size:15px;font-weight:bold}
+#related-posts .post-title a,#recent-posts .post-title a{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
+#related-posts .post-meta,#recent-posts .post-meta{display:table;font-size:13px;padding:8px 0 0 0}
+
+#related-posts{float:left;width:30%;overflow-x:hidden;overflow-y:auto;background-color:var(posts-background-color);padding:15px}
+#related-posts .load{height:456px;position:relative}
+#related-posts .spinner:before{top:40%;left:48%}
+#related-posts::-webkit-scrollbar{width:0px;background-color:transparent}
+#related-posts::-webkit-scrollbar-thumb{background-color:transparent}
+#related-posts::-webkit-scrollbar-track{background-color:transparent}
+.video-container{position:relative;padding-bottom:56.25%}
+.video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+.post-body .video-container{position:relative;padding-bottom:56.25%}
+.post-body .video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+
+#video-player{background-color:var(posts-background-color);float:left;width:70%;height:100%}
+#video-player{width:100%}
+
+.post-header{float:left;width:100%;display:block;position:relative;margin:0 0 15px 0}
+.post-header{margin:0}
