@@ -3,6 +3,8 @@
   --posts-background-color:#ffffff;
   --posts-icons-color:#707070;
   --body-link-color:#065FD4;
+  --body-text-color:#3c4043;
+  --body-link-hover-color:#065FD4;
 }
 
 /*@media (max-width:1920px){#related-posts{height:645px}}*/
@@ -350,7 +352,7 @@
 }
 
   
-body{background-color:#f0f1f5;color:$(body.text.color);font-family:Roboto,Arial,sans-serif;margin:0;min-height:100vh;overflow-wrap:break-word;word-break:break-word;word-wrap:break-word}
+body{background-color:#f0f1f5;color:var(--body-text-color);font-family:Roboto,Arial,sans-serif;margin:0;min-height:100vh;overflow-wrap:break-word;word-break:break-word;word-wrap:break-word}
 body.night-mode{background-color:#282828;color:var(--posts-background-color)}
 .hidden{display:none}
 .MD-StoTop{background:#ddd;border-radius:50%;right:15px;bottom:50px;padding:4px;cursor:pointer;position:fixed;z-index:7}
@@ -367,7 +369,7 @@ svg{fill:#aaa}
 .switch input{opacity:0;width:0;height:0;outline:0}
 .slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ddd;-webkit-transiton:.4s;transition:.4s;border-radius:34px}
 .slider:before{position:absolute;content:"";height:20px;width:20px;left:0;bottom:-2px;background-color:#aaa;box-shadow:0 0 1px #aaa;-webkit-transition:.4s;transition:.4s;border-radius:50%}
-.slider.checked{background-color:$(body.text.color)}
+.slider.checked{background-color:var(--body-text-color)}
 .slider.checked:before{-webkit-transform:translateX(20px);-ms-transform:translateX(20px);transform:translateX(20px)}
 .night-mode a{color:var(--posts-background-color)}
 
@@ -415,9 +417,9 @@ svg{fill:#aaa}
 
 
 .night-mode .breadcrumbs h1,.night-mode .breadcrumbs h3,.night-mode .sidebar-wrapper h3,.night-mode .breadcrumbs ul li:before,.night-mode .breadcrumbs .search-label a:after{color:var(--posts-background-color)}
-.night-mode .main-wrapper .main,.night-mode .sidebar-wrapper .widget,.night-mode .post-container,.night-mode #video-player,.night-mode #related-posts{background-color:$(body.text.color)}
-.night-mode .recent-comments .rc_block{background-color:$(body.text.color);border:1px solid #3e3e3e}
-.night-mode .recent-comments .rc_block:before{border-color:$(body.text.color) $(body.text.color) transparent transparent;}
+.night-mode .main-wrapper .main,.night-mode .sidebar-wrapper .widget,.night-mode .post-container,.night-mode #video-player,.night-mode #related-posts{background-color:var(--body-text-color)}
+.night-mode .recent-comments .rc_block{background-color:var(--body-text-color);border:1px solid #3e3e3e}
+.night-mode .recent-comments .rc_block:before{border-color:var(--body-text-color) var(--body-text-color) transparent transparent;}
 
 
 
@@ -589,7 +591,7 @@ svg{fill:#aaa}
 @-webkit-keyframes spinner{to{-webkit-transform:rotate(360deg)}}
 h2.post_title{float:left;width:100%;padding-top:10px;font-size:15px}
 h2.post_title a{display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;white-space:normal;-webkit-line-clamp:3}
-h2.post_title a:hover{color:$(body.link.hover.color)}
+h2.post_title a:hover{color:var(--body-link-hover-color)}
 .post_meta{float:left;width:100%;display:block;padding-top:5px}
 .post_meta a,.post_meta span{color:#707070}
 .post_meta span{font-size:13px}
@@ -826,7 +828,7 @@ form[name=contact-form] input[type=button]{background:transparent;border:1px sol
 .btn-popup-container{position:fixed;z-index:10;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;max-width:500px;background:var(--posts-background-color);text-align:left;padding:20px}
 .btn-popup-container p{font-size:18px;text-transform:uppercase;text-align:center}
 .btn-popup-container .btn-popup-close{position:absolute;top:8px;right:8px;width:30px;height:30px;cursor:pointer}
-.btn-popup-container .btn-popup-close::before,.btn-popup-container .btn-popup-close::after{content:'';position:absolute;top:12px;width:14px;height:2px;background-color:$(body.text.color)}
+.btn-popup-container .btn-popup-close::before,.btn-popup-container .btn-popup-close::after{content:'';position:absolute;top:12px;width:14px;height:2px;background-color:var(--body-text-color)}
 .btn-popup-container .btn-popup-close::before{-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg);left:8px}
 .btn-popup-container .btn-popup-close::after{-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg);right:8px}
 .sidebar-wrapper{float:left;width:100%;position:relative}
