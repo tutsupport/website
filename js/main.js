@@ -214,9 +214,9 @@ function getBVXTfromUrl(posBVXT,url)
         var postIdBVXT = elementBVXT.id.split("bvxt-id-")[1]
         gLBVXT.push(postIdBVXT);
         
-
+        console.log("T: " + $("#bvxn-id-" + postIdBVXT));
         $("#bvxn-id-" + postIdBVXT).removeClass('bvgy-item');
-
+        console.log("S: " + $("#bvxn-id-" + postIdBVXT));
         //$("#bvxn-id-" + postIdBVXT).addClass('hidden-item');
         
         //$('#recent-posts').find(".bvgy-item.bvxn-id-" + postIdBVXT).addClass('hidden-item2 bvgy' + gPID).removeClass('bvgy-item');
