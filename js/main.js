@@ -173,14 +173,14 @@ function ShowRecentPost()
     gLBVXT.forEach(postRemove1);
     function postRemove1(postId) 
     {
-        $("#bvxn-id-" + postId).addClass('hidden-item');
+//        $("#bvxn-id-" + postId).addClass('hidden-item');
     }
 
     var recent_posts = $('#recent-posts');
     //recent_posts.find('.bvgy-item.hidden-item').removeClass('hidden-item');
     //$('#recent-posts').find('.bvgy'+gPID).addClass('hidden-item');
 
-    recent_posts.find('.bvgy'+gPID).addClass('hidden-item');
+  //  recent_posts.find('.bvgy'+gPID).addClass('hidden-item');
     recent_posts.find('.bvgy-item').removeClass('hidden-item');
     /*
     setTimeout(function()
@@ -214,9 +214,7 @@ function getBVXTfromUrl(posBVXT,url)
         var postIdBVXT = elementBVXT.id.split("bvxt-id-")[1]
         gLBVXT.push(postIdBVXT);
         
-        console.log("T: " + $("#bvxn-id-" + postIdBVXT));
         $("#bvxn-id-" + postIdBVXT).removeClass('bvgy-item');
-        console.log("S: " + $("#bvxn-id-" + postIdBVXT));
         //$("#bvxn-id-" + postIdBVXT).addClass('hidden-item');
         
         //$('#recent-posts').find(".bvgy-item.bvxn-id-" + postIdBVXT).addClass('hidden-item2 bvgy' + gPID).removeClass('bvgy-item');
@@ -261,7 +259,7 @@ function loaddataBVXT(postId)
             }
         }
         //]]>
-        //ShowRecentPost();
+        ShowRecentPost();
     });
     //$(document).trigger('function_a_complete');
     //$(document).bind('function_a_complete', ShowRecentPost());
