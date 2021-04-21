@@ -198,7 +198,7 @@ function showBVXT()
     console.log("show");
 }
 
-function createBVXTfromurl(posBVXT,url)
+function getBVXTfromUrl(posBVXT,url)
 {
     
     $.ajax(url, 
@@ -214,7 +214,10 @@ function createBVXTfromurl(posBVXT,url)
         var postIdBVXT = elementBVXT.id.split("bvxt-id-")[1]
         gLBVXT.push(postIdBVXT);
         
-        $("#bvxn-id-" + postIdBVXT).addClass('hidden-item');
+
+        $("#bvxn-id-" + postIdBVXT).removeClass('bvgy-item');
+
+        //$("#bvxn-id-" + postIdBVXT).addClass('hidden-item');
         
         //$('#recent-posts').find(".bvgy-item.bvxn-id-" + postIdBVXT).addClass('hidden-item2 bvgy' + gPID).removeClass('bvgy-item');
         //$("#bvxn-id-" + postIdBVXT).removeClass('bvgy-item').addClass('hidden-item ' +'bvgy' + postIdBVXT);
@@ -250,8 +253,8 @@ function loaddataBVXT(postId)
                 links = dataBVXTs[i].innerText.split("@");
                 var link1 = links[1].trim();
                 var link2 = links[2].trim();
-                if(link1 != "N/A") createBVXTfromurl(posBVXTs[i],link1);
-                if(link2 != "N/A") createBVXTfromurl(posBVXTs[i],link2);
+                if(link1 != "N/A") getBVXTfromUrl(posBVXTs[i],link1);
+                if(link2 != "N/A") getBVXTfromUrl(posBVXTs[i],link2);
             }
             catch
             {
