@@ -199,66 +199,67 @@ function showBVXT()
 }
 
 function createBVXTfromurl(posBVXT,url)
-                          {
-                            
-                            $.ajax(url, 
-                            {
-                              dataType: 'html',
-                            }).done(function(ajaxResult) 
-                            {
-                              var doc = new DOMParser().parseFromString(ajaxResult, "text/html");
-                              var dataBVXT = doc.getElementsByClassName("bvxt-item hidden-item")[0];
-                              dataBVXT.classList.remove('hidden-item')
-                              posBVXT.appendChild(dataBVXT);
+{
+    
+    $.ajax(url, 
+    {
+        dataType: 'html',
+    }).done(function(ajaxResult) 
+    {
+        var doc = new DOMParser().parseFromString(ajaxResult, "text/html");
+        var elementBVXT = doc.getElementsByClassName("bvxt-item hidden-item")[0];
+        elementBVXT.classList.remove('hidden-item')
+        posBVXT.appendChild(elementBVXT);
 
-                              var postId = dataBVXT.id.split("bvxt-id-")[1]
-                              gLBVXT.push(postId);
-                               
-                               $("#bvxn-id-" + postId).addClass('hidden-item');
-                               
-                               //$('#recent-posts').find(".bvgy-item.bvxn-id-" + postId).addClass('hidden-item2 bvgy' + gPID).removeClass('bvgy-item');
-                               //$("#bvxn-id-" + postId).removeClass('bvgy-item').addClass('hidden-item ' +'bvgy' + postId);
-                              
-                              //var dataBVXT = doc.querySelector('.bvxt-item.hidden-item');
-                              //document.getElementsByClassName('bvxt-item hidden-item')[0].classList.remove('hidden-item');
-                              //showBVXT();
-                            });
-                             
-                          };
+        var postIdBVXT = elementBVXT.id.split("bvxt-id-")[1]
+        gLBVXT.push(postIdBVXT);
+        
+        $("#bvxn-id-" + postIdBVXT).addClass('hidden-item');
+        
+        //$('#recent-posts').find(".bvgy-item.bvxn-id-" + postIdBVXT).addClass('hidden-item2 bvgy' + gPID).removeClass('bvgy-item');
+        //$("#bvxn-id-" + postIdBVXT).removeClass('bvgy-item').addClass('hidden-item ' +'bvgy' + postIdBVXT);
+        
+        //var dataBVXT = doc.querySelector('.bvxt-item.hidden-item');
+        //document.getElementsByClassName('bvxt-item hidden-item')[0].classList.remove('hidden-item');
+        //showBVXT();
+    });
+        
+};
 
-                          function loaddataBVXT(postId)
-                          {
-                            var posBVXTs= document.querySelectorAll('.bvxt');
-                            //var posBVXT= $('.bvxt');
-                              gnumBVXT = posBVXTs.length;
-                            $.ajax('/p/bvxt-data.html', 
-                            {
-                              dataType: 'html',
-                            }).done(function(ajaxResult) 
-                            {
-                              
-                              var doc = new DOMParser().parseFromString(ajaxResult, "text/html");
-                              var dataBVXTs = doc.querySelectorAll('.p' + postId);
-                              var i = 0;
-                              //<![CDATA[
-                                for(i=0 ;i<gnumBVXT;i++)
-                                {
-                                  var links;
-                                  try
-                                  {
-                                    links = dataBVXTs[i].innerText.split("@");
-                                    var link1 = links[1].trim();
-                                    var link2 = links[2].trim();
-                                    if(link1 != "N/A") createBVXTfromurl(posBVXTs[i],link1);
-                                    if(link2 != "N/A") createBVXTfromurl(posBVXTs[i],link2);
-                                  }
-                                  catch
-                                  {
-                                  }
-                                }
-                              //]]>
-                              //ShowRecentPost();
-                            });
-                            //$(document).trigger('function_a_complete');
-                            //$(document).bind('function_a_complete', ShowRecentPost());
-                          };
+function loaddataBVXT(postId)
+{
+    var posBVXTs;
+    posBVXTs = document.querySelectorAll('.bvxt'); 
+    //posBVXTs= $('.bvxt');
+    gnumBVXT = posBVXTs.length;
+    $.ajax('/p/bvxt-data.html', 
+    {
+        dataType: 'html',
+    }).done(function(ajaxResult) 
+    {
+        
+        var doc = new DOMParser().parseFromString(ajaxResult, "text/html");
+        var dataBVXTs = doc.querySelectorAll('.p' + gPID);
+        var i = 0;
+        //<![CDATA[
+        for(i=0 ;i<gnumBVXT;i++)
+        {
+            var links;
+            try
+            {
+                links = dataBVXTs[i].innerText.split("@");
+                var link1 = links[1].trim();
+                var link2 = links[2].trim();
+                if(link1 != "N/A") createBVXTfromurl(posBVXTs[i],link1);
+                if(link2 != "N/A") createBVXTfromurl(posBVXTs[i],link2);
+            }
+            catch
+            {
+            }
+        }
+        //]]>
+        //ShowRecentPost();
+    });
+    //$(document).trigger('function_a_complete');
+    //$(document).bind('function_a_complete', ShowRecentPost());
+};
