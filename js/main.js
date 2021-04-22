@@ -367,7 +367,8 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                                 }
                               }
                             }
-                            console.log(maxResult);
+                            console.log('url: ' + url);
+                            console.log('maxResult: ' + maxResult);
                           //]]>
                             var placeshowdata ='#bvgy-right';
                             var tempElementId = "relatedPoststmp2021"
