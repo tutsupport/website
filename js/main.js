@@ -1,4 +1,4 @@
-var numedit = 100;
+var numedit = 10200;
 console.log('num edit: '+ numedit);
 var isHaveVideo = false;
 var isCallSearchAll = false;
@@ -154,24 +154,23 @@ $.ajax({
 
 function setVideo()
 {
+    console.log('.p' + gPID);
     var post_header = $('.post-body #player')[0];
     if(post_header)
     {
-        isHaveVideo=true;
+        isHaveVideo = true;
         var iframeSrc = post_header.src;
         var iframeSrcSplit = iframeSrc.split("/");
         var videoId = (iframeSrcSplit[iframeSrcSplit.length-1].split("?"))[0];
-        //<![CDATA[
         var iframe = 'https://www.youtube.com/embed/'+ videoId +'?loop=1&controls=1&rel=0&fs=1&showinfo=0&cc_load_policy=1&iv_load_policy=3&modestbranding=1&enablejsapi=1';                                
         $('.video-container').append('<iframe id="player" allow="______autoplay; encrypted-media" allowfullscreen="1" frameborder="0" src=' + iframe + '></iframe>');
-        //]]>
         post_header.remove();
         getYoutubeInfoByVideoId(videoId);
     }
     else
     {
         $('.post-header').remove();
-        isHaveVideo=false;
+        isHaveVideo = false;
     }
 }
 
@@ -243,34 +242,38 @@ function loaddataBVXT(postId)
     posBVXTs = document.querySelectorAll('.bvxt'); 
     //posBVXTs= $('.bvxt');
     gnumBVXT = posBVXTs.length;
-    $.ajax('/p/bvxt-data.html', 
+    if(gnumBVXT>0)
     {
-        dataType: 'html',
-    }).done(function(ajaxResult) 
-    {
-        
-        var doc = new DOMParser().parseFromString(ajaxResult, "text/html");
-        var dataBVXTs = doc.querySelectorAll('.p' + gPID);
-        var i = 0;
-        //<![CDATA[
-        for(i=0 ;i<gnumBVXT;i++)
+        $.ajax('/p/bvxt-data.html', 
         {
-            var links;
-            try
+            dataType: 'html',
+        }).done(function(ajaxResult) 
+        {
+            
+            var doc = new DOMParser().parseFromString(ajaxResult, "text/html");
+            var dataBVXTs = doc.querySelectorAll('.p' + gPID);
+            var i = 0;
+            //<![CDATA[
+            for(i=0 ;i<gnumBVXT;i++)
             {
-                links = dataBVXTs[i].innerText.split("@");
-                var link1 = links[1].trim();
-                var link2 = links[2].trim();
-                if(link1 != "N/A") getBVXTfromUrl(posBVXTs[i],link1);
-                if(link2 != "N/A") getBVXTfromUrl(posBVXTs[i],link2);
+                var links;
+                try
+                {
+                    links = dataBVXTs[i].innerText.split("@");
+                    var link1 = links[1].trim();
+                    var link2 = links[2].trim();
+                    if(link1 != "N/A") getBVXTfromUrl(posBVXTs[i],link1);
+                    if(link2 != "N/A") getBVXTfromUrl(posBVXTs[i],link2);
+                }
+                catch
+                {
+                }
             }
-            catch
-            {
-            }
-        }
-        //]]>
-        
-    });
+            //]]>
+            
+        });
+    }
+    
     //$(document).trigger('function_a_complete');
     //$(document).bind('function_a_complete', ShowRecentPost());
 };
@@ -409,7 +412,7 @@ function getRelatedPosts(url)
         }
 
         $("#apid" + gPID).removeClass('bvgy-item');
-        $("#bvxn-id-" + gPID).removeClass('bvgy-item').addClass('hidden-item');
+        $("#bvxn-id-" + gPID).removeClass('bvgy-item').addClass('hidden-item2');
 
         //$('.bvgy-item.hidden-item').removeClass('hidden-item');
         //ShowRecentPost();
@@ -450,7 +453,7 @@ function getRelatedPosts(url)
         {
             if(isHaveVideo)
             {
-            bvgyrightCount = bvgyrightCount - 6;
+                bvgyrightCount = bvgyrightCount - 6;
             }
             else
             {
@@ -460,7 +463,7 @@ function getRelatedPosts(url)
         {
             if(isHaveVideo)
             {
-            bvgyrightCount = bvgyrightCount - 12;
+                bvgyrightCount = bvgyrightCount - 12;
             }
             else
             {
