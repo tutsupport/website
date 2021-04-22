@@ -9,7 +9,7 @@ var gnumBVXT = 0;
 
 function TestShowPostId(postId)
 {
-    document.write(postid);
+    document.write(postId);
 }
 
 function removePost(postId)
