@@ -181,7 +181,7 @@ function ShowRecentPost()
     //$('#recent-posts').find('.bvgy'+gPID).addClass('hidden-item');
 
   //  recent_posts.find('.bvgy'+gPID).addClass('hidden-item');
-    recent_posts.find('.bvgy-item').removeClass('hidden-item');
+    recent_posts.find('.bvgy-item.hidden-item').removeClass('hidden-item');
     /*
     setTimeout(function()
     {
