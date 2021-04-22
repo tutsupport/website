@@ -388,13 +388,13 @@ function getRelatedPosts(url)
 
         var rs = $("#"+tempElementId).append(doc_post);
         
-        var npost2 = rs.find('.post').removeClass('post').addClass(postidcurrent).addClass(newClass);
+        var npost2 = rs.find('.post').removeClass('post').addClass('pidc' + gPID).addClass('bvgy-item hidden-item');
 
         $('#bvgy-right').append(npost2);
 
 */        
         $('#bvgy-right').append(doc_post);
-        $('#bvgy-right').find('.post').removeClass('post').addClass(postidcurrent).addClass(newClass);
+        $('#bvgy-right').find('.post').removeClass('post').addClass('pidc' + gPID).addClass('bvgy-item hidden-item');
         //document.querySelector('#bvgy-right').appendChild(doc_post[0]);
 
         //$("#" + tempElementId).remove();
