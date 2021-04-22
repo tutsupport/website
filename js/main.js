@@ -279,7 +279,20 @@ function loaddataBVXT(postId)
     //$(document).trigger('function_a_complete');
     //$(document).bind('function_a_complete', ShowRecentPost());
 };
+function BVGYLeft()
+{
+    return getbvgy('bvgy-left');
+}
 
+function BVGYRight()
+{
+    return getbvgy('bvgy-right');
+}
+
+function getbvgy(elId)
+{
+    return document.querySelectorAll("#" + elId + " .bvgy-item");
+}
 
 var article_body_itemHeight;// = document.querySelector("#article-body-item").clientHeight + 45;
                           var maxRow;// = Math.floor((article_body_itemHeight/194.83)) + 1;
@@ -416,40 +429,41 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                               //$('.bvgy-item.hidden-item').removeClass('hidden-item');
                               //ShowRecentPost();
                             
-                              var recent_post_current_count = document.querySelectorAll("#bvgy-left .bvgy-item").length;
-                              var numNeedAdd=0;
+                              var bvgyleftCount = BVGYLeft().length ;//document.querySelectorAll("#bvgy-left .bvgy-item").length;
+                              
+                              var bvgyleftNeedAdd=0;
                               //<![CDATA[
                                 if (windowWidth <=860 ) 
                                 {
-                                  numNeedAdd = 10 - recent_post_current_count;
+                                  bvgyleftNeedAdd = 10 - bvgyleftCount;
                                 }
                                 else if (windowWidth >= 861 && windowWidth <=1366 ) 
                                 {
-                                  numNeedAdd = 10 - recent_post_current_count;
+                                  bvgyleftNeedAdd = 10 - bvgyleftCount;
                                 }
                                 else if (windowWidth >1366)
                                 {
-                                  numNeedAdd = 12 - recent_post_current_count;
+                                  bvgyleftNeedAdd = 12 - bvgyleftCount;
                                 }
                                 
-                                var pos, len = post_num + numNeedAdd;
-                                var data = document.querySelectorAll('.bvgy-item .' + postidcurrent);
+                                var pos, len = post_num + bvgyleftNeedAdd;
+                                var data = BVGYRight() ;//document.querySelectorAll('#bvgy-right .bvgy-item.pidc1691217876339742303' + postidcurrent);
                                 console.log(data);
                                 for (pos = 0;pos <len; pos++)
                                 {
                                   $("#bvgy-left").append(data[pos]);
                                 }
                               
-                                recent_post_current_count = document.querySelectorAll("#bvgy-left .bvgy-item").length;
-                                var dataRelatedPosts = document.querySelectorAll("#bvgy-right .bvgy-item");
-                                //var dataRelatedPosts = $("#bvgy-right").find('.bvgy-item'); 
-                                var related_post_current_count = dataRelatedPosts.length;
+                                bvgyleftCount = BVGYLeft().length ;//document.querySelectorAll("#bvgy-left .bvgy-item").length;
+                                var BVGYRights = BVGYRight() ;//document.querySelectorAll("#bvgy-right .bvgy-item");
+                                //var BVGYRights = $("#bvgy-right").find('.bvgy-item'); 
+                                var bvgyrightCount = BVGYRights.length;
 
                                 if (windowWidth >= 861 && windowWidth <=1366 ) 
                                 {
                                   if(isHaveVideo)
                                   {
-                                    related_post_current_count = related_post_current_count - 6;
+                                    bvgyrightCount = bvgyrightCount - 6;
                                   }
                                   else
                                   {
@@ -459,18 +473,18 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                                 {
                                   if(isHaveVideo)
                                   {
-                                    related_post_current_count = related_post_current_count - 12;
+                                    bvgyrightCount = bvgyrightCount - 12;
                                   }
                                   else
                                   {
                                   }
                                 }
 
-                                var numHide = related_post_current_count - recent_post_current_count
+                                var numHide = bvgyrightCount - bvgyleftCount
                                 var j = 1;
                                 for (j = 1;j <=numHide; j++)
                                 {
-                                  //dataRelatedPosts[related_post_current_count-j].remove();
+                                  BVGYRights[bvgyrightCount-j].remove();
                                 }
                               //]]>
 
