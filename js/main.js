@@ -1,4 +1,4 @@
-var numedit = 100;
+var numedit = 1001;
 console.log('num edit: '+ numedit);
 var isHaveVideo = false;
 var isCallSearchAll = false;
@@ -308,29 +308,29 @@ function getRelatedPosts(url)
     {
         if(isHaveVideo)
         {
-        if(maxRow < 8)
-        {
-            maxResult = 20;
-            post_num = 0;
+            if(maxRow < 8)
+            {
+                maxResult = 20 + 8*gnumBVXT;
+                post_num = 0 + 2*gnumBVXT;
+            }
+            else
+            {
+                maxResult = maxRow*4 + 6 + 8*gnumBVXT;
+                post_num = (maxRow-5)*2 + 2*gnumBVXT;
+            }
         }
         else
         {
-            maxResult = maxRow*4 + 6;
-            post_num = (maxRow-5)*2;
-        }
-        }
-        else
-        {
-        if(maxRow < 8)
-        {
-            maxResult = 10;
-            post_num = 0;
-        }
-        else
-        {
-            maxResult = maxRow*4+1;
-            post_num = (maxRow-5)*2;
-        }
+            if(maxRow < 8)
+            {
+                maxResult = 10 + 8*gnumBVXT;
+                post_num = 0 + 2*gnumBVXT;
+            }
+            else
+            {
+                maxResult = maxRow*4 + 1 + 8*gnumBVXT;
+                post_num = (maxRow-5)*2 + 2*gnumBVXT;
+            }
         }
     }
     else if (windowWidth >1366)
@@ -338,28 +338,28 @@ function getRelatedPosts(url)
         columDisplay=3;
         if(isHaveVideo)
         {
+            if(maxRow < 7)
+            {
+                maxResult = 35 + 12*gnumBVXT;
+                post_num = 0 + 2*gnumBVXT;
+            }
+            else
+            {
+                maxResult = maxRow*6 +12 + 12*gnumBVXT;;
+                post_num = (maxRow-4)*3 + 2*gnumBVXT;
+            }
+        }
+        else
+        {
         if(maxRow < 7)
         {
-            maxResult = 35
-            post_num = 0;
+            maxResult = 27 + 12*gnumBVXT;;
+            post_num = 0 + 2*gnumBVXT;
         }
         else
         {
-            maxResult = maxRow*6 +12;
-            post_num = (maxRow-4)*3;
-        }
-        }
-        else
-        {
-        if(maxRow < 7)
-        {
-            maxResult = 27;
-            post_num = 0;
-        }
-        else
-        {
-            maxResult = maxRow*6+1;
-            post_num = (maxRow-4)*3;
+            maxResult = maxRow*6+1 + 12*gnumBVXT;;
+            post_num = (maxRow-4)*3 + 2*gnumBVXT;
         }
         }
     }
