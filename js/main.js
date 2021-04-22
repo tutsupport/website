@@ -374,7 +374,7 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                             var postidcurrent = 'pidc' + gPID;
                             //var doc_post; 
                             var numpost = 0;
-                            $.ajax(url + maxresults, 
+                            $.ajax(url + maxResult,//maxresults, 
                             {
                               dataType: 'html',
                             }).done(function(ajaxResult) 
