@@ -388,7 +388,7 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                               }
                               $("#apid" + gPID).removeClass('bvgy-item');
                               
-                              $("#bvxn-id-" + gPID).addClass('hidden-item');
+                              $("#bvxn-id-" + gPID).removeClass('bvgy-item').addClass('hidden-item');
                               //$('.bvgy-item.hidden-item').removeClass('hidden-item');
                               //ShowRecentPost();
                             
