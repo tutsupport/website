@@ -272,7 +272,7 @@ function loaddataBVXT(postId)
             }
         }
         //]]>
-        ShowRecentPost();
+        
     });
     //$(document).trigger('function_a_complete');
     //$(document).bind('function_a_complete', ShowRecentPost());
@@ -471,7 +471,7 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                                 }
                                 
                               //]]>
-                              
+                              ShowRecentPost();
                             })
                             if(isHaveVideo)
                             {
