@@ -483,7 +483,7 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                               
                                 if(numpost < maxresults && !isCallSearchAll ) 
                                 {
-                                  getRelatedPosts('/search/?max-results=',maxresults);
+                                  getRelatedPosts('/search/?max-results=',maxResult);
                                   isCallSearchAll = true;
                                 }
                                 
