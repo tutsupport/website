@@ -310,26 +310,26 @@ function getRelatedPosts(url)
         {
             if(maxRow < 8)
             {
-                maxResult = 20 + 8*gnumBVXT;
-                post_num = 0 + 2*gnumBVXT;
+                maxResult = 8*gnumBVXT + 20;
+                post_num = 2*gnumBVXT;
             }
             else
             {
-                maxResult = maxRow*4 + 6 + 8*gnumBVXT;
-                post_num = (maxRow-5)*2 + 2*gnumBVXT;
+                maxResult = maxRow*4 + 8*gnumBVXT + 6;
+                post_num = 2*(maxRow + 2*gnumBVXT - 5);
             }
         }
         else
         {
             if(maxRow < 8)
             {
-                maxResult = 10 + 8*gnumBVXT;
-                post_num = 0 + 2*gnumBVXT;
+                maxResult = 8*gnumBVXT + 10;
+                post_num = 2*gnumBVXT;
             }
             else
             {
-                maxResult = maxRow*4 + 1 + 8*gnumBVXT;
-                post_num = (maxRow-5)*2 + 2*gnumBVXT;
+                maxResult = maxRow*4 + 8*gnumBVXT + 1;
+                post_num = 2*(maxRow + 2*gnumBVXT - 5);
             }
         }
     }
@@ -340,37 +340,33 @@ function getRelatedPosts(url)
         {
             if(maxRow < 7)
             {
-                maxResult = 35 + 12*gnumBVXT;
-                post_num = 0 + 2*gnumBVXT;
+                maxResult = 12*gnumBVXT + 35;
+                post_num = 2*gnumBVXT;
             }
             else
             {
-                maxResult = maxRow*6 +12 + 12*gnumBVXT;;
-                post_num = (maxRow-4)*3 + 2*gnumBVXT;
+                maxResult = maxRow*6 + 12*gnumBVXT + 12;
+                post_num = 3*(maxRow + 2*gnumBVXT - 4);
             }
         }
         else
         {
-        if(maxRow < 7)
-        {
-            maxResult = 27 + 12*gnumBVXT;;
-            post_num = 0 + 2*gnumBVXT;
-        }
-        else
-        {
-            maxResult = maxRow*6+1 + 12*gnumBVXT;;
-            post_num = (maxRow-4)*3 + 2*gnumBVXT;
-        }
+            if(maxRow < 7)
+            {
+                maxResult = 12*gnumBVXT + 27;
+                post_num = 2*gnumBVXT;
+            }
+            else
+            {
+                maxResult = maxRow*6 + 12*gnumBVXT + 1;
+                post_num = 3*(maxRow + 2*gnumBVXT - 4);
+            }
         }
     }
 
     //console.log('url: ' + url);
     //console.log('maxResult: ' + maxResult);
 
-    var placeshowdata ='#bvgy-right';
-    var tempElementId = "relatedPoststmp2021"
-    var newClass = 'bvgy-item hidden-item';
-    var postidcurrent = 'pidc' + gPID;
     //var doc_post; 
     var numpost = 0;
     $.ajax(url + maxResult, 
