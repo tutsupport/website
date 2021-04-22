@@ -407,13 +407,11 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                               function hideBVGY1(value) 
                               {
                                 $("#apid" + value).addClass('hidden-item2').removeClass('bvgy-item');
-                                //hidenBVGY(value);
                               }
 
                               gLBVXT.forEach(hideBVGY2);
                               function hideBVGY2(value) 
                               {
-                                //$("#apid" + value).removeClass('bvgy-item');
                                 hidenBVGY(value);
                               }
 
@@ -423,7 +421,7 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                               //$('.bvgy-item.hidden-item').removeClass('hidden-item');
                               //ShowRecentPost();
                             
-                              var recent_post_current_count = document.querySelectorAll("#bvgy-left.bvgy-item").length;
+                              var recent_post_current_count = document.querySelectorAll("#bvgy-left .bvgy-item").length;
                               var numNeedAdd=0;
                               //<![CDATA[
                                 if (windowWidth <=860 ) 
@@ -440,10 +438,10 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                                 }
                                 
                                 var pos, len = post_num + numNeedAdd;
-                                var data = document.querySelectorAll('.' + postidcurrent);
+                                var data = document.querySelectorAll('.bvgy-item .' + postidcurrent);
                                 for (pos = 0;pos <len; pos++)
                                 {
-                                  //$("#bvgy-left").append(data[pos]);
+                                  $("#bvgy-left").append(data[pos]);
                                 }
                               
                                 recent_post_current_count = document.querySelectorAll("#bvgy-left .bvgy-item").length;
