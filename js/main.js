@@ -290,7 +290,7 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                           var maxRow;// = Math.floor((article_body_itemHeight/194.83)) + 1;
                           var maxResult;// = 0;//maxRow*6;
                           var post_num;// = 0;//maxRow*3;
-                          //$("#keyword"+ gPID).append("Height = " + article_body_itemHeight + ", MaRow = " + maxRow + ", MaxResult = " + maxResult);
+                          
 
                           
                           
@@ -365,8 +365,8 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                           
                           function getRelatedPosts(url,maxresults)
                           {
-                           
-                            //console.log(maxresults);
+                           $("#keyword"+ gPID).append("Height = " + article_body_itemHeight + ", MaRow = " + maxRow + ", MaxResult = " + maxResult);
+                            console.log(maxresults);
                             var placeshowdata ='#bvgy-right';
                             var tempElementId = "relatedPoststmp2021"
                             var newClass = 'bvgy-item hidden-item';
