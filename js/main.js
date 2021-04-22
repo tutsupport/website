@@ -451,13 +451,13 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                               //]]>
 
                               //<![CDATA[
-                              /*
+                              
                                 if(numpost < maxresults && !isCallSearchAll ) 
                                 {
                                   getRelatedPosts('/search/?max-results=',maxresults);
                                   isCallSearchAll = true;
                                 }
-                                */
+                                
                               //]]>
                               
                             })
