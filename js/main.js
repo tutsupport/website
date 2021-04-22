@@ -1,4 +1,4 @@
-var numedit = 10200;
+var numedit = 33333;
 console.log('num edit: '+ numedit);
 var isHaveVideo = false;
 var isCallSearchAll = false;
@@ -412,7 +412,7 @@ function getRelatedPosts(url)
         }
 
         $("#apid" + gPID).removeClass('bvgy-item');
-        $("#bvxn-id-" + gPID).removeClass('bvgy-item').addClass('hidden-item2');
+        $("#bvxn-id-" + gPID).removeClass('bvgy-item').addClass('hidden-item');
 
         //$('.bvgy-item.hidden-item').removeClass('hidden-item');
         //ShowRecentPost();
