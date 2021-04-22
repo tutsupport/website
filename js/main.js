@@ -1,4 +1,5 @@
-
+var numedit = 100;
+console.log('num edit: '+ numedit);
 var isHaveVideo = false;
 var isCallSearchAll = false;
 var gLBVXN = new Array();
@@ -176,12 +177,6 @@ function setVideo()
 
 function ShowRecentPost()
 {
-    gLBVXT.forEach(postRemove1);
-    function postRemove1(postId) 
-    {
-//        $("#bvxn-id-" + postId).addClass('hidden-item');
-    }
-
     var bvgy_left = $('#bvgy-left');
     //bvgy_left.find('.bvgy-item.hidden-item').removeClass('hidden-item');
     //$('#bvgy-left').find('.bvgy'+gPID).addClass('hidden-item');
@@ -194,13 +189,13 @@ function ShowRecentPost()
     var bvgy_right = $('#bvgy-right');
 
     bvgy_right.find('.bvgy-item.hidden-item').removeClass('hidden-item');
-    
+    /*
     setTimeout(function()
     {
         bvgy_left.removeClass('hidden-item');
         bvgy_right.removeClass('hidden-item');
-    }, 1500);
-    
+    }, 1000);
+    */
     //$('#PopularPosts1').find('.bvgy-item').removeClass('hidden-item');
     //$('#bvgy-left').append($('#PopularPosts1').find('.bvgy-item'));
 
@@ -295,216 +290,202 @@ function getbvgy(elId)
 }
 
 var article_body_itemHeight;// = document.querySelector("#article-body-item").clientHeight + 45;
-                          var maxRow;// = Math.floor((article_body_itemHeight/194.83)) + 1;
-                          var maxResult;// = 0;//maxRow*6;
-                          var post_num;// = 0;//maxRow*3;
+var maxRow;// = Math.floor((article_body_itemHeight/194.83)) + 1;
+var maxResult;// = 0;//maxRow*6;
+var post_num;// = 0;//maxRow*3;
+var windowWidth = window.innerWidth;
                           
+function getRelatedPosts(url)
+{
+    //$("#keyword"+ gPID).append("Height = " + article_body_itemHeight + ", MaRow = " + maxRow + ", MaxResult = " + maxResult);
+    
+    if (windowWidth <=860)
+    {
+        maxResult = 40;
+        post_num = 0;
+    }
+    else if (windowWidth >= 861 && windowWidth <=1366 ) 
+    {
+        if(isHaveVideo)
+        {
+        if(maxRow < 8)
+        {
+            maxResult = 20;
+            post_num = 0;
+        }
+        else
+        {
+            maxResult = maxRow*4 + 6;
+            post_num = (maxRow-5)*2;
+        }
+        }
+        else
+        {
+        if(maxRow < 8)
+        {
+            maxResult = 10;
+            post_num = 0;
+        }
+        else
+        {
+            maxResult = maxRow*4+1;
+            post_num = (maxRow-5)*2;
+        }
+        }
+    }
+    else if (windowWidth >1366)
+    {
+        columDisplay=3;
+        if(isHaveVideo)
+        {
+        if(maxRow < 7)
+        {
+            maxResult = 35
+            post_num = 0;
+        }
+        else
+        {
+            maxResult = maxRow*6 +12;
+            post_num = (maxRow-4)*3;
+        }
+        }
+        else
+        {
+        if(maxRow < 7)
+        {
+            maxResult = 27;
+            post_num = 0;
+        }
+        else
+        {
+            maxResult = maxRow*6+1;
+            post_num = (maxRow-4)*3;
+        }
+        }
+    }
 
-                          
-                          
-                          var windowWidth = window.innerWidth;
-                          
+    console.log('url: ' + url);
+    console.log('maxResult: ' + maxResult);
 
-                          
-                          function getRelatedPosts(url,maxresults)
-                          {
-                           $("#keyword"+ gPID).append("Height = " + article_body_itemHeight + ", MaRow = " + maxRow + ", MaxResult = " + maxResult);
-                            
-                            //<![CDATA[
-                            if (windowWidth <=860)
-                            {
-                              maxResult = 40;
-                              post_num = 0;
-                            }
-                            else if (windowWidth >= 861 && windowWidth <=1366 ) 
-                            {
-                              if(isHaveVideo)
-                              {
-                                if(maxRow < 8)
-                                {
-                                  maxResult = 20;
-                                  post_num = 0;
-                                }
-                                else
-                                {
-                                  maxResult = maxRow*4 + 6;
-                                  post_num = (maxRow-5)*2;
-                                }
-                              }
-                              else
-                              {
-                                if(maxRow < 8)
-                                {
-                                  maxResult = 10;
-                                  post_num = 0;
-                                }
-                                else
-                                {
-                                  maxResult = maxRow*4+1;
-                                  post_num = (maxRow-5)*2;
-                                }
-                              }
-                            }
-                            else if (windowWidth >1366)
-                            {
-                              columDisplay=3;
-                              if(isHaveVideo)
-                              {
-                                if(maxRow < 7)
-                                {
-                                  maxResult = 35
-                                  post_num = 0;
-                                }
-                                else
-                                {
-                                  maxResult = maxRow*6 +12;
-                                  post_num = (maxRow-4)*3;
-                                }
-                              }
-                              else
-                              {
-                                if(maxRow < 7)
-                                {
-                                  maxResult = 27;
-                                  post_num = 0;
-                                }
-                                else
-                                {
-                                  maxResult = maxRow*6+1;
-                                  post_num = (maxRow-4)*3;
-                                }
-                              }
-                            }
-                            console.log('url: ' + url);
-                            console.log('maxResult: ' + maxResult);
-                          //]]>
-                            var placeshowdata ='#bvgy-right';
-                            var tempElementId = "relatedPoststmp2021"
-                            var newClass = 'bvgy-item hidden-item';
-                            var postidcurrent = 'pidc' + gPID;
-                            //var doc_post; 
-                            var numpost = 0;
-                            $.ajax(url + maxResult,//maxresults, 
-                            {
-                              dataType: 'html',
-                            }).done(function(ajaxResult) 
-                            {
-                               
-                            
-                               
-                               
-                              var doc = new DOMParser().parseFromString(ajaxResult, "text/html");
-                              
-                              var doc_post = doc.querySelectorAll('.post');
-                              numpost = doc_post.length;
+    var placeshowdata ='#bvgy-right';
+    var tempElementId = "relatedPoststmp2021"
+    var newClass = 'bvgy-item hidden-item';
+    var postidcurrent = 'pidc' + gPID;
+    //var doc_post; 
+    var numpost = 0;
+    $.ajax(url + maxResult, 
+    {
+        dataType: 'html',
+    }).done(function(ajaxResult) 
+    {
+        var doc = new DOMParser().parseFromString(ajaxResult, "text/html");
+        var doc_post = doc.querySelectorAll('.post');
+        numpost = doc_post.length;
 
-                              var tempElement = document.createElement("div");
-                              tempElement.setAttribute("id", tempElementId);
-                              document.body.appendChild(tempElement); 
+        var tempElement = document.createElement("div");
+        tempElement.setAttribute("id", tempElementId);
+        document.body.appendChild(tempElement); 
 
-                              var rs = $("#"+tempElementId).append(doc_post);
-                              
-                              var npost2 = rs.find('.post').removeClass('post').addClass(postidcurrent).addClass(newClass);
-                              $('#bvgy-right').append(npost2);
-                              //document.querySelector('#bvgy-right').appendChild(doc_post[0]);
+        var rs = $("#"+tempElementId).append(doc_post);
+        
+        var npost2 = rs.find('.post').removeClass('post').addClass(postidcurrent).addClass(newClass);
+        $('#bvgy-right').append(npost2);
+        //document.querySelector('#bvgy-right').appendChild(doc_post[0]);
 
-                              //$("#" + tempElementId).remove();
+        //$("#" + tempElementId).remove();
 
-                              gLBVXN.push(gPID);
-                              gLBVXN.forEach(hideBVGY1);
-                              function hideBVGY1(value) 
-                              {
-                                $("#apid" + value).addClass('hidden-item2').removeClass('bvgy-item');
-                              }
+        gLBVXN.push(gPID);
+        gLBVXN.forEach(hideBVGY1);
+        function hideBVGY1(value) 
+        {
+        $("#apid" + value).addClass('hidden-item2').removeClass('bvgy-item');
+        }
 
-                              gLBVXT.forEach(hideBVGY2);
-                              function hideBVGY2(value) 
-                              {
-                                $("#apid" + value).addClass('hidden-item2').removeClass('bvgy-item');
-                              }
+        gLBVXT.forEach(hideBVGY2);
+        function hideBVGY2(value) 
+        {
+        $("#apid" + value).addClass('hidden-item2').removeClass('bvgy-item');
+        }
 
-                              $("#apid" + gPID).removeClass('bvgy-item');
-                              $("#bvxn-id-" + gPID).removeClass('bvgy-item').addClass('hidden-item');
+        $("#apid" + gPID).removeClass('bvgy-item');
+        $("#bvxn-id-" + gPID).removeClass('bvgy-item').addClass('hidden-item');
 
-                              //$('.bvgy-item.hidden-item').removeClass('hidden-item');
-                              //ShowRecentPost();
-                            
-                              var bvgyleftCount = BVGYLeft().length ;//document.querySelectorAll("#bvgy-left .bvgy-item").length;
-                              
-                              var bvgyleftNeedAdd=0;
-                              //<![CDATA[
-                                if (windowWidth <=860 ) 
-                                {
-                                  bvgyleftNeedAdd = 10 - bvgyleftCount;
-                                }
-                                else if (windowWidth >= 861 && windowWidth <=1366 ) 
-                                {
-                                  bvgyleftNeedAdd = 10 - bvgyleftCount;
-                                }
-                                else if (windowWidth >1366)
-                                {
-                                  bvgyleftNeedAdd = 12 - bvgyleftCount;
-                                }
-                                
-                                var pos, len = post_num + bvgyleftNeedAdd;
-                                var data = BVGYRight() ;//document.querySelectorAll('#bvgy-right .bvgy-item.pidc1691217876339742303' + postidcurrent);
-                                console.log(data);
-                                for (pos = 0;pos <len; pos++)
-                                {
-                                  $("#bvgy-left").append(data[pos]);
-                                }
-                              
-                                bvgyleftCount = BVGYLeft().length ;//document.querySelectorAll("#bvgy-left .bvgy-item").length;
-                                var BVGYRights = BVGYRight() ;//document.querySelectorAll("#bvgy-right .bvgy-item");
-                                //var BVGYRights = $("#bvgy-right").find('.bvgy-item'); 
-                                var bvgyrightCount = BVGYRights.length;
+        //$('.bvgy-item.hidden-item').removeClass('hidden-item');
+        //ShowRecentPost();
+    
+        var bvgyleftCount = BVGYLeft().length ;//document.querySelectorAll("#bvgy-left .bvgy-item").length;
+        
+        var bvgyleftNeedAdd=0;
+        //<![CDATA[
+        if (windowWidth <=860 ) 
+        {
+            bvgyleftNeedAdd = 10 - bvgyleftCount;
+        }
+        else if (windowWidth >= 861 && windowWidth <=1366 ) 
+        {
+            bvgyleftNeedAdd = 10 - bvgyleftCount;
+        }
+        else if (windowWidth >1366)
+        {
+            bvgyleftNeedAdd = 12 - bvgyleftCount;
+        }
+        
+        var pos, len = post_num + bvgyleftNeedAdd;
+        var data = BVGYRight() ;//document.querySelectorAll('#bvgy-right .bvgy-item.pidc1691217876339742303' + postidcurrent);
+        console.log(data);
+        for (pos = 0;pos <len; pos++)
+        {
+            $("#bvgy-left").append(data[pos]);
+        }
+        
+        bvgyleftCount = BVGYLeft().length ;//document.querySelectorAll("#bvgy-left .bvgy-item").length;
+        var BVGYRights = BVGYRight() ;//document.querySelectorAll("#bvgy-right .bvgy-item");
+        //var BVGYRights = $("#bvgy-right").find('.bvgy-item'); 
+        var bvgyrightCount = BVGYRights.length;
 
-                                if (windowWidth >= 861 && windowWidth <=1366 ) 
-                                {
-                                  if(isHaveVideo)
-                                  {
-                                    bvgyrightCount = bvgyrightCount - 6;
-                                  }
-                                  else
-                                  {
-                                  }
-                                }
-                                else if (windowWidth >1366)
-                                {
-                                  if(isHaveVideo)
-                                  {
-                                    bvgyrightCount = bvgyrightCount - 12;
-                                  }
-                                  else
-                                  {
-                                  }
-                                }
+        if (windowWidth >= 861 && windowWidth <=1366 ) 
+        {
+            if(isHaveVideo)
+            {
+            bvgyrightCount = bvgyrightCount - 6;
+            }
+            else
+            {
+            }
+        }
+        else if (windowWidth >1366)
+        {
+            if(isHaveVideo)
+            {
+            bvgyrightCount = bvgyrightCount - 12;
+            }
+            else
+            {
+            }
+        }
 
-                                var numHide = bvgyrightCount - bvgyleftCount
-                                var j = 1;
-                                for (j = 1;j <=numHide; j++)
-                                {
-                                  BVGYRights[bvgyrightCount-j].remove();
-                                }
-                              //]]>
+        var numHide = bvgyrightCount - bvgyleftCount
+        var j = 1;
+        for (j = 1;j <=numHide; j++)
+        {
+            BVGYRights[bvgyrightCount-j].remove();
+        }
 
-                              //<![CDATA[
-                              console.log(isCallSearchAll);
-                                if(numpost < maxResult && !isCallSearchAll ) 
-                                {
-                                  getRelatedPosts('/search/?max-results=',maxResult);
-                                  isCallSearchAll = true;
-                                }
-                                
-                              //]]>
-                              ShowRecentPost();
-                            })
-                            if(isHaveVideo)
-                            {
-                              //document.querySelector("#bvgy-right").style.height = 'px';
-                            }
-                            else
-                            {
-                              //document.querySelector("#bvgy-right").style.height = '2200px';
-                            }
-                          }
+        console.log(isCallSearchAll);
+        if(numpost < maxResult && !isCallSearchAll ) 
+        {
+            getRelatedPosts('/search/?max-results='+ maxResult);
+            isCallSearchAll = true;
+        }
+        
+        ShowRecentPost();
+    })
+    if(isHaveVideo)
+    {
+        //document.querySelector("#bvgy-right").style.height = 'px';
+    }
+    else
+    {
+        //document.querySelector("#bvgy-right").style.height = '2200px';
+    }
+}
