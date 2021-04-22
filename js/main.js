@@ -1,4 +1,4 @@
-var numedit = 1001;
+var numedit = 100;
 console.log('num edit: '+ numedit);
 var isHaveVideo = false;
 var isCallSearchAll = false;
@@ -381,7 +381,7 @@ function getRelatedPosts(url)
         var doc = new DOMParser().parseFromString(ajaxResult, "text/html");
         var doc_post = doc.querySelectorAll('.post');
         numpost = doc_post.length;
-
+/*
         var tempElement = document.createElement("div");
         tempElement.setAttribute("id", tempElementId);
         document.body.appendChild(tempElement); 
@@ -389,7 +389,12 @@ function getRelatedPosts(url)
         var rs = $("#"+tempElementId).append(doc_post);
         
         var npost2 = rs.find('.post').removeClass('post').addClass(postidcurrent).addClass(newClass);
+
         $('#bvgy-right').append(npost2);
+
+*/        
+        $('#bvgy-right').append(doc_post);
+        $('#bvgy-right').find('.post').removeClass('post').addClass(postidcurrent).addClass(newClass);
         //document.querySelector('#bvgy-right').appendChild(doc_post[0]);
 
         //$("#" + tempElementId).remove();
