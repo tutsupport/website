@@ -364,8 +364,8 @@ function getRelatedPosts(url)
         }
     }
 
-    console.log('url: ' + url);
-    console.log('maxResult: ' + maxResult);
+    //console.log('url: ' + url);
+    //console.log('maxResult: ' + maxResult);
 
     var placeshowdata ='#bvgy-right';
     var tempElementId = "relatedPoststmp2021"
@@ -432,7 +432,9 @@ function getRelatedPosts(url)
         
         var pos, len = post_num + bvgyleftNeedAdd;
         var data = BVGYRight() ;//document.querySelectorAll('#bvgy-right .bvgy-item.pidc1691217876339742303' + postidcurrent);
-        console.log(data);
+
+        //console.log(data);
+
         for (pos = 0;pos <len; pos++)
         {
             $("#bvgy-left").append(data[pos]);
@@ -471,7 +473,8 @@ function getRelatedPosts(url)
             BVGYRights[bvgyrightCount-j].remove();
         }
 
-        console.log(isCallSearchAll);
+        //console.log(isCallSearchAll);
+
         if(numpost < maxResult && !isCallSearchAll ) 
         {
             getRelatedPosts('/search/?max-results='+ maxResult);
