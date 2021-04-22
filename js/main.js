@@ -228,6 +228,7 @@ function getBVXTfromUrl(posBVXT,url)
         gLBVXT.push(postIdBVXT);
         
         $("#bvxn-id-" + postIdBVXT).addClass('hidden-item2').removeClass('bvgy-item');
+        $("#apid" + postIdBVXT).removeClass('bvgy-item');
         //$("#bvxn-id-" + postIdBVXT).addClass('hidden-item');
         
         //$('#bvgy-left').find(".bvgy-item.bvxn-id-" + postIdBVXT).addClass('hidden-item2 bvgy' + gPID).removeClass('bvgy-item');
