@@ -434,6 +434,7 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                                 
                                 var pos, len = post_num + numNeedAdd;
                                 var data = document.querySelectorAll('.bvgy-item .' + postidcurrent);
+                                console.log(data);
                                 for (pos = 0;pos <len; pos++)
                                 {
                                   $("#bvgy-left").append(data[pos]);
