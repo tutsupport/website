@@ -187,7 +187,7 @@ function ShowRecentPost()
     setTimeout(function()
     {
         $('#bvgy-left').removeClass('hidden-item');
-    }, 1000);
+    }, 1500);
     
     //$('#PopularPosts1').find('.bvgy-item').removeClass('hidden-item');
     //$('#bvgy-left').append($('#PopularPosts1').find('.bvgy-item'));
@@ -350,7 +350,7 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                             //console.log(maxresults);
                             var placeshowdata ='#bvgy-right';
                             var tempElementId = "relatedPoststmp2021"
-                            var newClass = 'bvgy-item hidden-item1';
+                            var newClass = 'bvgy-item hidden-item';
                             var postidcurrent = 'pidc' + gPID;
                             //var doc_post; 
                             var numpost = 0;
