@@ -1,3 +1,4 @@
+
 var isHaveVideo = false;
 var isCallSearchAll = false;
 var gLBVXN = new Array();
@@ -5,6 +6,11 @@ var gLBVXT = new Array();
 var gPID = -1;
 var gblogId = '<data:blog.blogId/>';
 var gnumBVXT = 0;
+
+function TestShowPostId(postId)
+{
+    document.write(postid);
+}
 
 function removePost(postId)
 {
