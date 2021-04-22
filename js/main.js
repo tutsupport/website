@@ -211,6 +211,11 @@ function showBVXT()
     console.log("show");
 }
 
+function hidenBVGY(postId)
+{
+    $("#bvxn-id-" + postId).addClass('hidden-item2').removeClass('bvgy-item');
+    $("#apid" + postId).addClass('hidden-item2').removeClass('bvgy-item');
+}
 function getBVXTfromUrl(posBVXT,url)
 {
     
@@ -227,8 +232,9 @@ function getBVXTfromUrl(posBVXT,url)
         var postIdBVXT = elementBVXT.id.split("bvxt-id-")[1]
         gLBVXT.push(postIdBVXT);
         
-        $("#bvxn-id-" + postIdBVXT).addClass('hidden-item2').removeClass('bvgy-item');
-        $("#apid" + postIdBVXT).addClass('hidden-item2').removeClass('bvgy-item');
+        hidenBVGY(postIdBVXT);
+        //$("#bvxn-id-" + postIdBVXT).addClass('hidden-item2').removeClass('bvgy-item');
+        //$("#apid" + postIdBVXT).addClass('hidden-item2').removeClass('bvgy-item');
         //$("#bvxn-id-" + postIdBVXT).addClass('hidden-item');
         
         //$('#bvgy-left').find(".bvgy-item.bvxn-id-" + postIdBVXT).addClass('hidden-item2 bvgy' + gPID).removeClass('bvgy-item');
