@@ -398,13 +398,13 @@ function getRelatedPosts(url)
         gLBVXN.forEach(hideBVGY1);
         function hideBVGY1(value) 
         {
-        $("#apid" + value).addClass('hidden-item2').removeClass('bvgy-item');
+            $(".pid" + value).addClass('hidden-item2').removeClass('bvgy-item');
         }
 
         gLBVXT.forEach(hideBVGY2);
         function hideBVGY2(value) 
         {
-        $("#apid" + value).addClass('hidden-item2').removeClass('bvgy-item');
+            $("#pid" + value).addClass('hidden-item2').removeClass('bvgy-item');
         }
 
         $("#apid" + gPID).removeClass('bvgy-item');
