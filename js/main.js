@@ -183,12 +183,12 @@ function ShowRecentPost()
   //  recent_posts.find('.bvgy'+gPID).addClass('hidden-item');
     recent_posts.find('.bvgy-item.hidden-item').removeClass('hidden-item');
     //$('#bvgy-left').find('.bvgy-item.hidden-item').removeClass('hidden-item');
-    /*
+    
     setTimeout(function()
     {
         $('#bvgy-left').removeClass('hidden-item');
-    }, 700);
-    */
+    }, 1000);
+    
     //$('#PopularPosts1').find('.bvgy-item').removeClass('hidden-item');
     //$('#bvgy-left').append($('#PopularPosts1').find('.bvgy-item'));
 
