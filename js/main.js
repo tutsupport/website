@@ -211,11 +211,6 @@ function showBVXT()
     console.log("show");
 }
 
-function hidenBVGY(postId)
-{
-    $("#bvxn-id-" + postId).addClass('hidden-item2').removeClass('bvgy-item');
-    $("#apid" + postId).addClass('hidden-item2').removeClass('bvgy-item');
-}
 function getBVXTfromUrl(posBVXT,url)
 {
     
@@ -233,7 +228,7 @@ function getBVXTfromUrl(posBVXT,url)
         gLBVXT.push(postIdBVXT);
         
         //hidenBVGY(postIdBVXT);
-        //$("#bvxn-id-" + postIdBVXT).addClass('hidden-item2').removeClass('bvgy-item');
+        $("#bvxn-id-" + postIdBVXT).addClass('hidden-item2').removeClass('bvgy-item');
         //$("#apid" + postIdBVXT).addClass('hidden-item2').removeClass('bvgy-item');
         //$("#bvxn-id-" + postIdBVXT).addClass('hidden-item');
         
@@ -412,7 +407,7 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                               gLBVXT.forEach(hideBVGY2);
                               function hideBVGY2(value) 
                               {
-                                hidenBVGY(value);
+                                $("#apid" + value).addClass('hidden-item2').removeClass('bvgy-item');
                               }
 
                               $("#apid" + gPID).removeClass('bvgy-item');
