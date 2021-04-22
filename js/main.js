@@ -479,7 +479,7 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                               //]]>
 
                               //<![CDATA[
-                              
+                              console.log(isCallSearchAll);
                                 if(numpost < maxresults && !isCallSearchAll ) 
                                 {
                                   getRelatedPosts('/search/?max-results=',maxResult);
