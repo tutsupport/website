@@ -295,78 +295,79 @@ var article_body_itemHeight;// = document.querySelector("#article-body-item").cl
                           
                           
                           var windowWidth = window.innerWidth;
-                          //<![CDATA[
-                            if (windowWidth <=860)
-                            {
-                              maxResult = 40;
-                              post_num = 0;
-                            }
-                            else if (windowWidth >= 861 && windowWidth <=1366 ) 
-                            {
-                              if(isHaveVideo)
-                              {
-                                if(maxRow < 8)
-                                {
-                                  maxResult = 20;
-                                  post_num = 0;
-                                }
-                                else
-                                {
-                                  maxResult = maxRow*4 + 6;
-                                  post_num = (maxRow-5)*2;
-                                }
-                              }
-                              else
-                              {
-                                if(maxRow < 8)
-                                {
-                                  maxResult = 10;
-                                  post_num = 0;
-                                }
-                                else
-                                {
-                                  maxResult = maxRow*4+1;
-                                  post_num = (maxRow-5)*2;
-                                }
-                              }
-                            }
-                            else if (windowWidth >1366)
-                            {
-                              columDisplay=3;
-                              if(isHaveVideo)
-                              {
-                                if(maxRow < 7)
-                                {
-                                  maxResult = 35
-                                  post_num = 0;
-                                }
-                                else
-                                {
-                                  maxResult = maxRow*6 +12;
-                                  post_num = (maxRow-4)*3;
-                                }
-                              }
-                              else
-                              {
-                                if(maxRow < 7)
-                                {
-                                  maxResult = 27;
-                                  post_num = 0;
-                                }
-                                else
-                                {
-                                  maxResult = maxRow*6+1;
-                                  post_num = (maxRow-4)*3;
-                                }
-                              }
-                            }
-                          //]]>
+                          
 
                           
                           function getRelatedPosts(url,maxresults)
                           {
                            $("#keyword"+ gPID).append("Height = " + article_body_itemHeight + ", MaRow = " + maxRow + ", MaxResult = " + maxResult);
                             console.log(maxresults);
+                            //<![CDATA[
+                                if (windowWidth <=860)
+                                {
+                                  maxResult = 40;
+                                  post_num = 0;
+                                }
+                                else if (windowWidth >= 861 && windowWidth <=1366 ) 
+                                {
+                                  if(isHaveVideo)
+                                  {
+                                    if(maxRow < 8)
+                                    {
+                                      maxResult = 20;
+                                      post_num = 0;
+                                    }
+                                    else
+                                    {
+                                      maxResult = maxRow*4 + 6;
+                                      post_num = (maxRow-5)*2;
+                                    }
+                                  }
+                                  else
+                                  {
+                                    if(maxRow < 8)
+                                    {
+                                      maxResult = 10;
+                                      post_num = 0;
+                                    }
+                                    else
+                                    {
+                                      maxResult = maxRow*4+1;
+                                      post_num = (maxRow-5)*2;
+                                    }
+                                  }
+                                }
+                                else if (windowWidth >1366)
+                                {
+                                  columDisplay=3;
+                                  if(isHaveVideo)
+                                  {
+                                    if(maxRow < 7)
+                                    {
+                                      maxResult = 35
+                                      post_num = 0;
+                                    }
+                                    else
+                                    {
+                                      maxResult = maxRow*6 +12;
+                                      post_num = (maxRow-4)*3;
+                                    }
+                                  }
+                                  else
+                                  {
+                                    if(maxRow < 7)
+                                    {
+                                      maxResult = 27;
+                                      post_num = 0;
+                                    }
+                                    else
+                                    {
+                                      maxResult = maxRow*6+1;
+                                      post_num = (maxRow-4)*3;
+                                    }
+                                  }
+                                }
+                              //]]>
                             var placeshowdata ='#bvgy-right';
                             var tempElementId = "relatedPoststmp2021"
                             var newClass = 'bvgy-item hidden-item';
