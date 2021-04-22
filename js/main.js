@@ -1,4 +1,4 @@
-var numedit = 33333;
+var numedit = 4444;
 console.log('num edit: '+ numedit);
 var isHaveVideo = false;
 var isCallSearchAll = false;
@@ -408,7 +408,7 @@ function getRelatedPosts(url)
         gLBVXT.forEach(hideBVGY2);
         function hideBVGY2(value) 
         {
-            $("#pid" + value).addClass('hidden-item2').removeClass('bvgy-item');
+            $(".pid" + value).addClass('hidden-item2').removeClass('bvgy-item');
         }
 
         $("#apid" + gPID).removeClass('bvgy-item');
