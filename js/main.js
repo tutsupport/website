@@ -1,5 +1,8 @@
-var numedit = 33336;
-console.log('num edit: '+ numedit);
+var year = '2021';
+var month = '04';
+var numedit = '1';
+ 
+console.log('version: '+ year + '.' + month + '.' + numedit);
 var isHaveVideo = false;
 var isCallSearchAll = false;
 var gLBVXN = new Array();
