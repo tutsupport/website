@@ -2,7 +2,7 @@ var year = '2021';
 var month = '04';
 var numedit = 2;
  
-console.log('version: '+ year + '.' + month + '.' + numedit);
+console.log('version: '+ year + '.' + month + '.e' + numedit);
 var isHaveVideo = false;
 var isCallSearchAll = false;
 var gLBVXN = new Array();
