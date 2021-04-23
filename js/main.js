@@ -1,4 +1,4 @@
-var numedit = 4444;
+var numedit = 33336;
 console.log('num edit: '+ numedit);
 var isHaveVideo = false;
 var isCallSearchAll = false;
@@ -380,103 +380,6 @@ function getRelatedPosts(url)
         var doc = new DOMParser().parseFromString(ajaxResult, "text/html");
         var doc_post = doc.querySelectorAll('.post');
         numpost = doc_post.length;
-/*
-        var tempElement = document.createElement("div");
-        tempElement.setAttribute("id", tempElementId);
-        document.body.appendChild(tempElement); 
-
-        var rs = $("#"+tempElementId).append(doc_post);
-        
-        var npost2 = rs.find('.post').removeClass('post').addClass('pidc' + gPID).addClass('bvgy-item hidden-item');
-
-        $('#bvgy-right').append(npost2);
-
-*/        
-        $('#bvgy-right').append(doc_post);
-        $('#bvgy-right').find('.post').removeClass('post').addClass('pidc' + gPID).addClass('bvgy-item hidden-item');
-        //document.querySelector('#bvgy-right').appendChild(doc_post[0]);
-
-        //$("#" + tempElementId).remove();
-
-        gLBVXN.push(gPID);
-        gLBVXN.forEach(hideBVGY1);
-        function hideBVGY1(value) 
-        {
-            $(".pid" + value).addClass('hidden-item2').removeClass('bvgy-item');
-        }
-
-        gLBVXT.forEach(hideBVGY2);
-        function hideBVGY2(value) 
-        {
-            $(".pid" + value).addClass('hidden-item2').removeClass('bvgy-item');
-        }
-
-        $("#apid" + gPID).removeClass('bvgy-item');
-        $("#bvxn-id-" + gPID).removeClass('bvgy-item').addClass('hidden-item');
-
-        //$('.bvgy-item.hidden-item').removeClass('hidden-item');
-        //ShowRecentPost();
-    
-        var bvgyleftCount = BVGYLeft().length ;//document.querySelectorAll("#bvgy-left .bvgy-item").length;
-        
-        var bvgyleftNeedAdd=0;
-        //<![CDATA[
-        if (windowWidth <=860 ) 
-        {
-            bvgyleftNeedAdd = 10 - bvgyleftCount;
-        }
-        else if (windowWidth >= 861 && windowWidth <=1366 ) 
-        {
-            bvgyleftNeedAdd = 10 - bvgyleftCount;
-        }
-        else if (windowWidth >1366)
-        {
-            bvgyleftNeedAdd = 12 - bvgyleftCount;
-        }
-        
-        var pos, len = post_num + bvgyleftNeedAdd;
-        var data = BVGYRight() ;//document.querySelectorAll('#bvgy-right .bvgy-item.pidc1691217876339742303' + postidcurrent);
-
-        //console.log(data);
-
-        for (pos = 0;pos <len; pos++)
-        {
-            $("#bvgy-left").append(data[pos]);
-        }
-        
-        bvgyleftCount = BVGYLeft().length ;//document.querySelectorAll("#bvgy-left .bvgy-item").length;
-        var BVGYRights = BVGYRight() ;//document.querySelectorAll("#bvgy-right .bvgy-item");
-        //var BVGYRights = $("#bvgy-right").find('.bvgy-item'); 
-        var bvgyrightCount = BVGYRights.length;
-
-        if (windowWidth >= 861 && windowWidth <=1366 ) 
-        {
-            if(isHaveVideo)
-            {
-                bvgyrightCount = bvgyrightCount - 6;
-            }
-            else
-            {
-            }
-        }
-        else if (windowWidth >1366)
-        {
-            if(isHaveVideo)
-            {
-                bvgyrightCount = bvgyrightCount - 12;
-            }
-            else
-            {
-            }
-        }
-
-        var numHide = bvgyrightCount - bvgyleftCount
-        var j = 1;
-        for (j = 1;j <=numHide; j++)
-        {
-            BVGYRights[bvgyrightCount-j].remove();
-        }
-
         //console.log(isCallSearchAll);
 
         if(numpost < maxResult && !isCallSearchAll ) 
@@ -484,6 +387,108 @@ function getRelatedPosts(url)
             getRelatedPosts('/search/?max-results='+ maxResult);
             isCallSearchAll = true;
         }
+        else
+        {
+            /*
+            var tempElement = document.createElement("div");
+            tempElement.setAttribute("id", tempElementId);
+            document.body.appendChild(tempElement); 
+
+            var rs = $("#"+tempElementId).append(doc_post);
+            
+            var npost2 = rs.find('.post').removeClass('post').addClass('pidc' + gPID).addClass('bvgy-item hidden-item');
+
+            $('#bvgy-right').append(npost2);
+
+            */        
+            $('#bvgy-right').append(doc_post);
+            $('#bvgy-right').find('.post').removeClass('post').addClass('pidc' + gPID).addClass('bvgy-item hidden-item');
+            //document.querySelector('#bvgy-right').appendChild(doc_post[0]);
+
+            //$("#" + tempElementId).remove();
+
+            gLBVXN.push(gPID);
+            gLBVXN.forEach(hideBVGY1);
+            function hideBVGY1(value) 
+            {
+                $(".pid" + value).addClass('hidden-item2').removeClass('bvgy-item');
+            }
+
+            gLBVXT.forEach(hideBVGY2);
+            function hideBVGY2(value) 
+            {
+                $(".pid" + value).addClass('hidden-item2').removeClass('bvgy-item');
+            }
+
+            $("#apid" + gPID).removeClass('bvgy-item');
+            $("#bvxn-id-" + gPID).removeClass('bvgy-item').addClass('hidden-item');
+
+            //$('.bvgy-item.hidden-item').removeClass('hidden-item');
+            //ShowRecentPost();
+        
+            var bvgyleftCount = BVGYLeft().length ;//document.querySelectorAll("#bvgy-left .bvgy-item").length;
+            
+            var bvgyleftNeedAdd=0;
+            //<![CDATA[
+            if (windowWidth <=860 ) 
+            {
+                bvgyleftNeedAdd = 10 - bvgyleftCount;
+            }
+            else if (windowWidth >= 861 && windowWidth <=1366 ) 
+            {
+                bvgyleftNeedAdd = 10 - bvgyleftCount;
+            }
+            else if (windowWidth >1366)
+            {
+                bvgyleftNeedAdd = 12 - bvgyleftCount;
+            }
+            
+            var pos, len = post_num + bvgyleftNeedAdd;
+            var data = BVGYRight() ;//document.querySelectorAll('#bvgy-right .bvgy-item.pidc1691217876339742303' + postidcurrent);
+
+            //console.log(data);
+
+            for (pos = 0;pos <len; pos++)
+            {
+                $("#bvgy-left").append(data[pos]);
+            }
+            
+            bvgyleftCount = BVGYLeft().length ;//document.querySelectorAll("#bvgy-left .bvgy-item").length;
+            var BVGYRights = BVGYRight() ;//document.querySelectorAll("#bvgy-right .bvgy-item");
+            //var BVGYRights = $("#bvgy-right").find('.bvgy-item'); 
+            var bvgyrightCount = BVGYRights.length;
+
+            if (windowWidth >= 861 && windowWidth <=1366 ) 
+            {
+                if(isHaveVideo)
+                {
+                    bvgyrightCount = bvgyrightCount - 6;
+                }
+                else
+                {
+                }
+            }
+            else if (windowWidth >1366)
+            {
+                if(isHaveVideo)
+                {
+                    bvgyrightCount = bvgyrightCount - 12;
+                }
+                else
+                {
+                }
+            }
+
+            var numHide = bvgyrightCount - bvgyleftCount
+            var j = 1;
+            for (j = 1;j <=numHide; j++)
+            {
+                BVGYRights[bvgyrightCount-j].remove();
+            }
+
+        }
+
+        
         
         ShowRecentPost();
     })
