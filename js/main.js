@@ -1,6 +1,6 @@
 var year = '2021';
 var month = '04';
-var numedit = '1';
+var numedit = 2;
  
 console.log('version: '+ year + '.' + month + '.' + numedit);
 var isHaveVideo = false;
@@ -226,7 +226,7 @@ function getBVXTfromUrl(posBVXT,url)
         
         //hidenBVGY(postIdBVXT);
         $("#bvxn-id-" + postIdBVXT).addClass('hidden-item2').removeClass('bvgy-item');
-        //$("#apid" + postIdBVXT).addClass('hidden-item2').removeClass('bvgy-item');
+        $(".pid" + postIdBVXT).addClass('hidden-item2').removeClass('bvgy-item');
         //$("#bvxn-id-" + postIdBVXT).addClass('hidden-item');
         
         //$('#bvgy-left').find(".bvgy-item.bvxn-id-" + postIdBVXT).addClass('hidden-item2 bvgy' + gPID).removeClass('bvgy-item');
