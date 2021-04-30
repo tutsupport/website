@@ -588,6 +588,7 @@ function atRP()
  
 function atRP()
 {
+    if($('.posts article.google-auto-placed').length == 0) return;
     var posts = $('.posts article');//[6].getAttribute("class");
     var counts = posts.length;
     //console.log(posts);
@@ -655,6 +656,7 @@ function atRP()
 }
 
 //atRP();
+
 
 
 
