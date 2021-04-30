@@ -598,7 +598,7 @@ function atRP()
     {
         var pcurrent = posts[i];
         var clcurrent = getClass(pcurrent);
-        console.log('clcurrent: '+clcurrent);
+        console.log('clcurrent ' + i + ': ' + clcurrent);
         if(clcurrent == 'google-auto-placed')
         {
             i = i + 1;
@@ -606,7 +606,7 @@ function atRP()
         else
         {
             var clnext = getClass(posts[i+1]);
-            console.log('clnext: '+clnext);
+            console.log('clnext: ' + (i+1) + ': ' +clnext);
             if(clnext == 'google-auto-placed')
             {
                 pcurrent.style='width:100%';
@@ -628,6 +628,7 @@ function atRP()
     */
 }
 
+//atRP();
 
 
 
