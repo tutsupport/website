@@ -585,6 +585,7 @@ function atRP()
  {
      return e.getAttribute("class");
  }
+ 
 function atRP()
 {
     var posts = $('.posts article');//[6].getAttribute("class");
@@ -624,24 +625,22 @@ function atRP()
                 var clpre1 = getClass(posts[i-1]);
                 console.log('clpre1: ' + (i-1) + ': ' +clpre1);
 
-                var clpre2 = getClass(posts[i-2]);
-                console.log('clpre2: ' + (i-2) + ': ' +clpre2);
-
                 if(clpre1 == 'google-auto-placed')
-                {
-                    pcurrent.style='width:100%';
-                    i = i + 1;
-                }
-                else if((clpre1 != 'google-auto-placed')&&(clpre2 == 'google-auto-placed'))
                 {
                     pcurrent.style='width:100%';
                     i = i + 1;
                 }
                 else
                 {
-                 i = i + 1;
+                    var clpre2 = getClass(posts[i-2]);
+                    console.log('clpre2: ' + (i-2) + ': ' +clpre2);
+
+                    if(clpre2 != 'google-auto-placed')
+                    {
+                        pcurrent.style='width:100%';
+                    }
+                    i = i + 1;
                 }
-             
             }
         }
     }
