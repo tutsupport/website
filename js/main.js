@@ -507,6 +507,7 @@ function getRelatedPosts(url)
 
 
 
+
 function atRP()
 {
     var posts = $('.posts article');//[6].getAttribute("class");
@@ -569,15 +570,14 @@ function atRP()
             i = i + 1;
         } 
     }
-    /*
+    
     var pn = posts[counts-1];
     var cln = pn.getAttribute("class");
     if(cln !='google-auto-placed')
     {
         pn.style='width:100%';
     }
-    */
+    
 }
-
 
 
