@@ -506,7 +506,7 @@ function getRelatedPosts(url)
 }
 
 
-
+/*
 
 function atRP()
 {
@@ -578,6 +578,52 @@ function atRP()
         pn.style='width:100%';
     }
     
+}
+*/
+
+ function getClass(e)
+ {
+     return e.getAttribute("class");
+ }
+function atRP()
+{
+    var posts = $('.posts article');//[6].getAttribute("class");
+    var counts = posts.length;
+    //console.log(posts);
+    var i=0;
+    var vt = -1;
+
+
+    while (i<counts)
+    {
+        var pcurrent = posts[i];
+        var clcurrent = getClass(pcurrent);
+        if(clcurrent == 'google-auto-placed')
+        {
+            i = i + 1;
+        }
+        else
+        {
+            var clnext = getClass(posts[i+1]);
+            if(clnext == 'google-auto-placed')
+            {
+                pi.style='width:100%';
+                i = i + 2;
+            }
+            else
+            {
+                i = i + 2;
+            }
+        }
+    }
+    /*
+    var pn = posts[counts-1];
+    var cln = pn.getAttribute("class");
+    if(cln !='google-auto-placed')
+    {
+        pn.style='width:100%';
+    }
+    */
 }
 
 
