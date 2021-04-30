@@ -506,6 +506,7 @@ function getRelatedPosts(url)
 }
 
 
+
 function atRP()
 {
     var posts = $('.posts article');//[6].getAttribute("class");
@@ -519,7 +520,7 @@ function atRP()
     {
         var p = posts[i];
         var cl = p.getAttribute("class");
-        pos = i+1;
+        vt = i+1;
         //console.log( i + ': ' + cl);
         if(cl=='google-auto-placed')
         {
@@ -544,14 +545,22 @@ function atRP()
                 }
                 else
                 {
-                    var p2 = posts[i+2];
-                    var cl2 = p2.getAttribute("class");
-
-                    if(cl2 == 'google-auto-placed')
+                    if(i==counts-2)
                     {
                         p1.style='width:100%';
-                    }  
-                    i = i + 2;
+                    }
+                    else
+                    {
+                        var p2 = posts[i+2];
+                        var cl2 = p2.getAttribute("class");
+
+                        if(cl2 == 'google-auto-placed')
+                        {
+                            p1.style='width:100%';
+                        }  
+                        i = i + 2;
+                    }
+                    
                 }
             }
         }
@@ -560,12 +569,15 @@ function atRP()
             i = i + 1;
         } 
     }
+    /*
     var pn = posts[counts-1];
     var cln = pn.getAttribute("class");
     if(cln !='google-auto-placed')
     {
         pn.style='width:100%';
     }
+    */
 }
+
 
 
