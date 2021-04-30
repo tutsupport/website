@@ -637,6 +637,11 @@ function atRP()
                     pcurrent.style='width:100%';
                     i = i + 1;
                 }
+                else
+                {
+                 i = i + 1;
+                }
+             
             }
         }
     }
