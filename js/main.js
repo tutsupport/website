@@ -504,3 +504,68 @@ function getRelatedPosts(url)
         //document.querySelector("#bvgy-right").style.height = '2200px';
     }
 }
+
+
+function atRP()
+{
+    var posts = $('.posts article');//[6].getAttribute("class");
+    var counts = posts.length;
+    //console.log(posts);
+    var i=0;
+    var vt = -1;
+
+
+    while (i<counts)
+    {
+        var p = posts[i];
+        var cl = p.getAttribute("class");
+        pos = i+1;
+        //console.log( i + ': ' + cl);
+        if(cl=='google-auto-placed')
+        {
+            if(vt % 2 == 0)
+            {
+                var p1 = posts[i-1];
+                var cl1 = p1.getAttribute("class");
+                if(cl1!='google-auto-placed')
+                {
+                    p1.style='width:100%';
+                    i = i + 1;
+                }
+                
+            }
+            else
+            {
+                var p1 = posts[i+1];
+                var cl1 = p1.getAttribute("class");
+                if(cl1 == 'google-auto-placed')
+                {
+                    i = i + 1;
+                }
+                else
+                {
+                    var p2 = posts[i+2];
+                    var cl2 = p2.getAttribute("class");
+
+                    if(cl2 == 'google-auto-placed')
+                    {
+                        p1.style='width:100%';
+                    }  
+                    i = i + 2;
+                }
+            }
+        }
+        else
+        {
+            i = i + 1;
+        } 
+    }
+    var pn = posts[counts-1];
+    var cln = pn.getAttribute("class");
+    if(cln !='google-auto-placed')
+    {
+        pn.style='width:100%';
+    }
+}
+
+
