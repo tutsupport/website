@@ -581,7 +581,7 @@ function atRP()
 }
 */
 
- function getClass(e)
+  function getClass(e)
  {
      return e.getAttribute("class");
  }
@@ -607,7 +607,7 @@ function atRP()
             var clnext = getClass(posts[i+1]);
             if(clnext == 'google-auto-placed')
             {
-                pi.style='width:100%';
+                pcurrent.style='width:100%';
                 i = i + 2;
             }
             else
