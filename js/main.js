@@ -878,8 +878,7 @@ function atRP3()
 
 
  
-  
-  
+ 
  function loadAds()
  {
      setTimeout(function()
@@ -904,8 +903,7 @@ function atRP3()
             atRP3();
         }
         
-        },2000);
-    }
+    },2000);
  }
  
  function getClass(e)
@@ -1035,7 +1033,7 @@ function atRP3()
                         else if(clnext1 != 'adpost' && clcurrent == 'adpost')
                         {
                             //pnext1.style = 'width:55%; padding: 0 7.5px 15px 25px';
-                            pnext1.insertAdjacentHTML("beforebegin", adstring);
+                            pnext1.insertAdjacentHTML("afterend", adstring);
                             loadAds();
                         }
                         
