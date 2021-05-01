@@ -976,9 +976,8 @@ function atRP3()
     var vt = -1;
     var clgauto = 'google-auto-placed';
 
-    var adstring = "<article class = 'adpost'>"
     var cladpost = 'adpost';
-
+    var adstring = "<article class = 'adpost'>"
     + "<!-- start adsbygoogle code -->"
     + "<!-- inlineAds -->"
     + "<ins class='adsbygoogle'"
@@ -1082,21 +1081,3 @@ function atRP3()
         }
     }
 }
-
-
-//atRP3();
-
-
-
-function atRP4()
-{
-    var gadauto = $('.posts article.google-auto-placed');
-    var adpost = $('.posts article.adpost');
-    var posts = $('.posts article.post');
-
-    console.log('gadauto : ' + gadauto.length);
-    console.log('adpost : ' + adpost.length);
-    console.log('posts : ' + posts.length);
-}
-
-//atRP4();
