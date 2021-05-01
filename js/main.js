@@ -590,7 +590,7 @@ function atRP()
     }
     
 }
-*/
+
 
  function getClass(e)
  {
@@ -657,7 +657,7 @@ function atRP()
         }
     }
 }
-/*
+
 function atRP3()
 {
     if($('.posts article.google-auto-placed').length == 0) return;
@@ -751,9 +751,6 @@ function atRP3()
         }
     }
 }
-*/
-
-
 
 function loadAds()
 {
@@ -876,3 +873,230 @@ function atRP3()
 }
 
 //atRP3();
+*/
+
+
+
+ function loadAds()
+ {
+     setTimeout(function()
+     {
+        (adsbygoogle = window.adsbygoogle || []).push({})
+     }, 1000);
+ }
+ 
+ function atRP()
+ {
+    if($('.posts article.google-auto-placed').length == 0) return;
+    setTimeout(function()
+    {
+    var windowW = window.innerWidth;
+    if((windowW>544) && (windowW<=810))
+    {
+        atRP2();
+    }
+    else if((windowW>810) && (windowW<=1194))
+    {
+        atRP3();
+    }
+    
+    },2000);
+ }
+ 
+ function getClass(e)
+ {
+     return e.getAttribute("class");
+ }
+ 
+function atRP2()
+{
+    
+    var posts = $('.posts article');//[6].getAttribute("class");
+    var counts = posts.length;
+    //console.log(posts);
+    var i=0;
+    var vt = -1;
+
+
+    while (i<counts)
+    {
+        var pcurrent = posts[i];
+        var clcurrent = getClass(pcurrent);
+        //console.log('clcurrent ' + i + ': ' + clcurrent);
+        if(clcurrent == 'google-auto-placed')
+        {
+            i = i + 1;
+        }
+        else
+        {
+            if(i<counts-1)
+            {
+                var clnext = getClass(posts[i+1]);
+                //console.log('clnext: ' + (i+1) + ': ' +clnext);
+                if(clnext == 'google-auto-placed')
+                {
+                    pcurrent.style='width:100%';
+                    i = i + 2;
+                }
+                else
+                {
+                    i = i + 2;
+                }
+            }
+            else
+            {
+                var clpre1 = getClass(posts[i-1]);
+                //console.log('clpre1: ' + (i-1) + ': ' +clpre1);
+
+                if(clpre1 == 'google-auto-placed')
+                {
+                    pcurrent.style='width:100%';
+                    i = i + 1;
+                }
+                else
+                {
+                    var clpre2 = getClass(posts[i-2]);
+                    //console.log('clpre2: ' + (i-2) + ': ' +clpre2);
+
+                    if(clpre2 != 'google-auto-placed')
+                    {
+                        pcurrent.style='width:100%';
+                    }
+                    i = i + 1;
+                }
+            }
+        }
+    }
+}
+
+
+function atRP3()
+{
+    if($('.posts article.google-auto-placed').length == 0) return;
+    var posts = $('.posts article');//[6].getAttribute("class");
+    var counts = posts.length;
+    //console.log(posts);
+    var i=0;
+    var vt = -1;
+    var adstring = "<article class='adpost'>"
+    + "<!-- start adsbygoogle code -->"
+    + "<!-- inlineAds -->"
+    + "<ins class='adsbygoogle'"
+    + "style='display:block'"
+    + "data-ad-format='fluid'"
+    + "data-ad-layout-key='-6t+ed+2i-1n-4w'"
+    + "data-ad-client='ca-pub-7829978247024975'"
+    + "data-ad-slot='5664771281'>"
+    + "</ins>"
+    + "<!-- end adsbygoogle code -->"
+    + "</article>";
+
+    while (i<counts)
+    {
+        var pcurrent = posts[i];
+        var clcurrent = getClass(pcurrent);
+        if(clcurrent == 'google-auto-placed')
+        {
+            i = i + 1;
+        }
+        else
+        {
+            if(i<counts-2)
+            {
+                var pnext1 = posts[i+1];
+                var clnext1 = getClass(pnext1);
+                if(clnext1 == 'google-auto-placed')
+                {
+                    pcurrent.style='width:100%';
+                    i = i + 2;
+                }
+                else
+                {
+                    var pnext2 = posts[i+2];
+                    var clnext2 = getClass(pnext2);
+                    if(clnext2 == 'google-auto-placed')
+                    {
+                        if(clnext1 !='adpost' && clcurrent!='adpost')
+                        {
+                            pcurrent.style= 'width:50%';
+                            pnext1.style='width:50%';
+                        }
+                        else if(clnext1 == 'adpost' && clcurrent != 'adpost')
+                        {
+                            //pcurrent.style= 'width:55%; padding: 0 7.5px 15px 25px';
+                            pcurrent.insertAdjacentHTML("beforebegin", adstring);
+                            loadAds();
+                        }
+                        else if(clnext1 != 'adpost' && clcurrent == 'adpost')
+                        {
+                            //pnext1.style = 'width:55%; padding: 0 7.5px 15px 25px';
+                            pnext1.insertAdjacentHTML("beforebegin", adstring);
+                            loadAds();
+                        }
+                        
+                    }
+                    else
+                    {
+
+                    }
+                    i = i + 3;
+                }
+            }
+            else
+            {
+                var ppre1 = posts[i-1];
+                var clpre1 = getClass(ppre1);
+                if(clpre1 == 'google-auto-placed')
+                {
+                    pcurrent.style='width:100%';
+                    i = i + 1;
+                }
+                else
+                {
+                    var ppre2 = posts[i-2];
+                    var clpre2 = getClass(ppre2);
+
+                    if(clpre2 == 'google-auto-placed')
+                    {
+                        if(ppre1 !='adpost' && clcurrent!='adpost')
+                        {
+                            pcurrent.style= 'width:50%';
+                            ppre1.style='width:50%';
+                        }
+                        else if(ppre1 == 'adpost' && clcurrent != 'adpost')
+                        {
+                            //pcurrent.style= 'width:55%';//width:calc(200%/3)';
+                            pcurrent.insertAdjacentHTML("beforebegin", adstring);
+                            loadAds();
+                        }
+                        else if(ppre1 != 'adpost' && clcurrent == 'adpost')
+                        {
+                            //ppre1.style = 'width:55%';//width:calc(200%/3)';
+                            ppre1.insertAdjacentHTML("beforebegin", adstring);
+                            loadAds();
+                        }
+                    }
+                    i = i + 1;
+                }
+            }
+        }
+    }
+}
+
+
+//atRP3();
+/*
+
+
+function atRP4()
+{
+    var gadauto = $('.posts article.google-auto-placed');
+    var adpost = $('.posts article.adpost');
+    var posts = $('.posts article.post');
+
+    console.log('gadauto : ' + gadauto.length);
+    console.log('adpost : ' + adpost.length);
+    console.log('posts : ' + posts.length);
+}
+*/
+//atRP4();
