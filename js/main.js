@@ -879,6 +879,7 @@ function atRP3()
 
  
  
+  
  function loadAds()
  {
      setTimeout(function()
@@ -903,7 +904,7 @@ function atRP3()
             atRP3();
         }
         
-    },2000);
+    },1500);
  }
  
  function getClass(e)
