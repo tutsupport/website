@@ -878,6 +878,7 @@ function atRP3()
 
 
  
+  
  function loadAds()
  {
      setTimeout(function()
@@ -888,7 +889,7 @@ function atRP3()
  
  function atRP()
  {
-    if($('.posts article.google-auto-placed').length == 0) return;
+    
     var windowW = window.innerWidth;
     if((windowW>544) && (windowW<=810))
     {
@@ -907,7 +908,7 @@ function atRP3()
  
 function atRP2()
 {
-    
+    if($('.posts article.google-auto-placed').length == 0) return;
     var posts = $('.posts article');//[6].getAttribute("class");
     var counts = posts.length;
     //console.log(posts);
