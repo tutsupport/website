@@ -13,7 +13,7 @@ var gPID = -1;
 var gblogId = '<data:blog.blogId/>';
 var gnumBVXT = 0;
 
-function atRP4()
+function ginfo()
 {
     var gadauto = $('.posts article.google-auto-placed');
     var adpost = $('.posts article.adpost');
@@ -876,7 +876,7 @@ function atRP3()
      setTimeout(function()
      {
         (adsbygoogle = window.adsbygoogle || []).push({})
-     }, 1000);
+     }, 1500);
  }
  
  function atRP()
@@ -894,8 +894,12 @@ function atRP3()
         {
             atRP3();
         }
+        else
+        {
+            //atRP4();
+        }
         
-    },1500);
+    },2000);
  }
  
  function getClass(e)
@@ -968,7 +972,7 @@ function atRP2()
 
 function atRP3()
 {
-    if($('.posts article.google-auto-placed').length == 0) return;
+    //if($('.posts article.google-auto-placed').length == 0) return;
     var posts = $('.posts article');//[6].getAttribute("class");
     var counts = posts.length;
     //console.log(posts);
@@ -1001,6 +1005,122 @@ function atRP3()
         else
         {
             if(i<counts-2)
+            {
+                var pnext1 = posts[i+1];
+                var clnext1 = getClass(pnext1);
+                if(clnext1 == clgauto)
+                {
+                    pcurrent.style='width:100%';
+                    i = i + 2;
+                }
+                else
+                {
+                    var pnext2 = posts[i+2];
+                    var clnext2 = getClass(pnext2);
+                    if(clnext2 == clgauto)
+                    {
+                        if(clnext1 != cladpost && clcurrent != cladpost)
+                        {
+                            pcurrent.style= 'width:50%';
+                            pnext1.style='width:50%';
+                        }
+                        else if(clnext1 == cladpost && clcurrent != cladpost)
+                        {
+                            //pcurrent.style= 'width:55%; padding: 0 7.5px 15px 25px';
+                            pcurrent.insertAdjacentHTML("beforebegin", adstring);
+                            loadAds();
+                        }
+                        else if(clnext1 != cladpost && clcurrent == cladpost)
+                        {
+                            //pnext1.style = 'width:55%; padding: 0 7.5px 15px 25px';
+                            pnext1.insertAdjacentHTML("afterend", adstring);
+                            loadAds();
+                        }
+                        
+                    }
+                    else
+                    {
+
+                    }
+                    i = i + 3;
+                }
+            }
+            else
+            {
+                var ppre1 = posts[i-1];
+                var clpre1 = getClass(ppre1);
+                if(clpre1 == clgauto)
+                {
+                    pcurrent.style='width:100%';
+                    i = i + 1;
+                }
+                else
+                {
+                    var ppre2 = posts[i-2];
+                    var clpre2 = getClass(ppre2);
+
+                    if(clpre2 == clgauto)
+                    {
+                        if(ppre1 != cladpost && clcurrent != cladpost)
+                        {
+                            pcurrent.style= 'width:50%';
+                            ppre1.style='width:50%';
+                        }
+                        else if(ppre1 == cladpost && clcurrent != cladpost)
+                        {
+                            //pcurrent.style= 'width:55%';//width:calc(200%/3)';
+                            pcurrent.insertAdjacentHTML("beforebegin", adstring);
+                            loadAds();
+                        }
+                        else if(ppre1 != cladpost && clcurrent == cladpost)
+                        {
+                            //ppre1.style = 'width:55%';//width:calc(200%/3)';
+                            ppre1.insertAdjacentHTML("beforebegin", adstring);
+                            loadAds();
+                        }
+                    }
+                    i = i + 1;
+                }
+            }
+        }
+    }
+}
+
+function atRP4()
+{
+    //if($('.posts article.google-auto-placed').length == 0) return;
+    var posts = $('.posts article');//[6].getAttribute("class");
+    var counts = posts.length;
+    //console.log(posts);
+    var i=0;
+    var vt = -1;
+    var clgauto = 'google-auto-placed';
+
+    var cladpost = 'adpost';
+    var adstring = "<article class = 'adpost'>"
+    + "<!-- start adsbygoogle code -->"
+    + "<!-- inlineAds -->"
+    + "<ins class='adsbygoogle'"
+    + "style='display:block'"
+    + "data-ad-format='fluid'"
+    + "data-ad-layout-key='-6t+ed+2i-1n-4w'"
+    + "data-ad-client='ca-pub-7829978247024975'"
+    + "data-ad-slot='5664771281'>"
+    + "</ins>"
+    + "<!-- end adsbygoogle code -->"
+    + "</article>";
+
+    while (i<counts)
+    {
+        var pcurrent = posts[i];
+        var clcurrent = getClass(pcurrent);
+        if(clcurrent == clgauto)
+        {
+            i = i + 1;
+        }
+        else
+        {
+            if(i<counts-3)
             {
                 var pnext1 = posts[i+1];
                 var clnext1 = getClass(pnext1);
