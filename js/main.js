@@ -755,6 +755,13 @@ function atRP3()
 
 
 
+function loadAds()
+{
+    setTimeout(function()
+    {
+       (adsbygoogle = window.adsbygoogle || []).push({})
+    }, 1800);
+} 
 function atRP3()
 {
     if($('.posts article.google-auto-placed').length == 0) return;
@@ -773,13 +780,6 @@ function atRP3()
     + "data-ad-client='ca-pub-7829978247024975'"
     + "data-ad-slot='5664771281'>"
     + "</ins>"
-    + "<script>"
-    + "setTimeout(function()"
-    + "{"
-    + "    (adsbygoogle = window.adsbygoogle || []).push({});"
-    + "}, 1800);"
-                    
-    + "</script>"
     + "<!-- end adsbygoogle code -->"
     + "</article>";
 
@@ -817,11 +817,13 @@ function atRP3()
                         {
                             //pcurrent.style= 'width:55%; padding: 0 7.5px 15px 25px';
                             pcurrent.insertAdjacentHTML("beforebegin", adstring);
+                            loadAds();
                         }
                         else if(clnext1 != 'adpost' && clcurrent == 'adpost')
                         {
                             //pnext1.style = 'width:55%; padding: 0 7.5px 15px 25px';
                             pnext1.insertAdjacentHTML("beforebegin", adstring);
+                            loadAds();
                         }
                         
                     }
@@ -857,11 +859,13 @@ function atRP3()
                         {
                             //pcurrent.style= 'width:55%';//width:calc(200%/3)';
                             pcurrent.insertAdjacentHTML("beforebegin", adstring);
+                            loadAds();
                         }
                         else if(ppre1 != 'adpost' && clcurrent == 'adpost')
                         {
                             //ppre1.style = 'width:55%';//width:calc(200%/3)';
                             ppre1.insertAdjacentHTML("beforebegin", adstring);
+                            loadAds();
                         }
                     }
                     i = i + 1;
