@@ -1,3 +1,5 @@
+ 
+
 var year = '2021';
 var month = '04';
 var numedit = 2;
@@ -752,13 +754,6 @@ function atRP3()
     }
 }
 
-function loadAds()
-{
-    setTimeout(function()
-    {
-       (adsbygoogle = window.adsbygoogle || []).push({})
-    }, 1000);
-}
 function atRP3()
 {
     if($('.posts article.google-auto-placed').length == 0) return;
@@ -876,10 +871,6 @@ function atRP3()
 */
 
 
-
- 
- 
-  
  function loadAds()
  {
      setTimeout(function()
@@ -920,6 +911,7 @@ function atRP2()
     //console.log(posts);
     var i=0;
     var vt = -1;
+    var clgauto = 'google-auto-placed';
 
 
     while (i<counts)
@@ -927,7 +919,7 @@ function atRP2()
         var pcurrent = posts[i];
         var clcurrent = getClass(pcurrent);
         //console.log('clcurrent ' + i + ': ' + clcurrent);
-        if(clcurrent == 'google-auto-placed')
+        if(clcurrent == clgauto)
         {
             i = i + 1;
         }
@@ -937,7 +929,7 @@ function atRP2()
             {
                 var clnext = getClass(posts[i+1]);
                 //console.log('clnext: ' + (i+1) + ': ' +clnext);
-                if(clnext == 'google-auto-placed')
+                if(clnext == clgauto)
                 {
                     pcurrent.style='width:100%';
                     i = i + 2;
@@ -952,7 +944,7 @@ function atRP2()
                 var clpre1 = getClass(posts[i-1]);
                 //console.log('clpre1: ' + (i-1) + ': ' +clpre1);
 
-                if(clpre1 == 'google-auto-placed')
+                if(clpre1 == clgauto)
                 {
                     pcurrent.style='width:100%';
                     i = i + 1;
@@ -962,7 +954,7 @@ function atRP2()
                     var clpre2 = getClass(posts[i-2]);
                     //console.log('clpre2: ' + (i-2) + ': ' +clpre2);
 
-                    if(clpre2 != 'google-auto-placed')
+                    if(clpre2 != clgauto)
                     {
                         pcurrent.style='width:100%';
                     }
@@ -982,7 +974,11 @@ function atRP3()
     //console.log(posts);
     var i=0;
     var vt = -1;
-    var adstring = "<article class='adpost'>"
+    var clgauto = 'google-auto-placed';
+
+    var adstring = "<article class = 'adpost'>"
+    var cladpost = 'adpost';
+
     + "<!-- start adsbygoogle code -->"
     + "<!-- inlineAds -->"
     + "<ins class='adsbygoogle'"
@@ -999,7 +995,7 @@ function atRP3()
     {
         var pcurrent = posts[i];
         var clcurrent = getClass(pcurrent);
-        if(clcurrent == 'google-auto-placed')
+        if(clcurrent == clgauto)
         {
             i = i + 1;
         }
@@ -1009,7 +1005,7 @@ function atRP3()
             {
                 var pnext1 = posts[i+1];
                 var clnext1 = getClass(pnext1);
-                if(clnext1 == 'google-auto-placed')
+                if(clnext1 == clgauto)
                 {
                     pcurrent.style='width:100%';
                     i = i + 2;
@@ -1018,20 +1014,20 @@ function atRP3()
                 {
                     var pnext2 = posts[i+2];
                     var clnext2 = getClass(pnext2);
-                    if(clnext2 == 'google-auto-placed')
+                    if(clnext2 == clgauto)
                     {
-                        if(clnext1 !='adpost' && clcurrent!='adpost')
+                        if(clnext1 != cladpost && clcurrent != cladpost)
                         {
                             pcurrent.style= 'width:50%';
                             pnext1.style='width:50%';
                         }
-                        else if(clnext1 == 'adpost' && clcurrent != 'adpost')
+                        else if(clnext1 == cladpost && clcurrent != cladpost)
                         {
                             //pcurrent.style= 'width:55%; padding: 0 7.5px 15px 25px';
                             pcurrent.insertAdjacentHTML("beforebegin", adstring);
                             loadAds();
                         }
-                        else if(clnext1 != 'adpost' && clcurrent == 'adpost')
+                        else if(clnext1 != cladpost && clcurrent == cladpost)
                         {
                             //pnext1.style = 'width:55%; padding: 0 7.5px 15px 25px';
                             pnext1.insertAdjacentHTML("afterend", adstring);
@@ -1050,7 +1046,7 @@ function atRP3()
             {
                 var ppre1 = posts[i-1];
                 var clpre1 = getClass(ppre1);
-                if(clpre1 == 'google-auto-placed')
+                if(clpre1 == clgauto)
                 {
                     pcurrent.style='width:100%';
                     i = i + 1;
@@ -1060,20 +1056,20 @@ function atRP3()
                     var ppre2 = posts[i-2];
                     var clpre2 = getClass(ppre2);
 
-                    if(clpre2 == 'google-auto-placed')
+                    if(clpre2 == clgauto)
                     {
-                        if(ppre1 !='adpost' && clcurrent!='adpost')
+                        if(ppre1 != cladpost && clcurrent != cladpost)
                         {
                             pcurrent.style= 'width:50%';
                             ppre1.style='width:50%';
                         }
-                        else if(ppre1 == 'adpost' && clcurrent != 'adpost')
+                        else if(ppre1 == cladpost && clcurrent != cladpost)
                         {
                             //pcurrent.style= 'width:55%';//width:calc(200%/3)';
                             pcurrent.insertAdjacentHTML("beforebegin", adstring);
                             loadAds();
                         }
-                        else if(ppre1 != 'adpost' && clcurrent == 'adpost')
+                        else if(ppre1 != cladpost && clcurrent == cladpost)
                         {
                             //ppre1.style = 'width:55%';//width:calc(200%/3)';
                             ppre1.insertAdjacentHTML("beforebegin", adstring);
