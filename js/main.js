@@ -11,6 +11,17 @@ var gPID = -1;
 var gblogId = '<data:blog.blogId/>';
 var gnumBVXT = 0;
 
+function atRP4()
+{
+    var gadauto = $('.posts article.google-auto-placed');
+    var adpost = $('.posts article.adpost');
+    var posts = $('.posts article.post');
+
+    console.log('gadauto : ' + gadauto.length);
+    console.log('adpost : ' + adpost.length);
+    console.log('posts : ' + posts.length);
+}
+
 function TestShowPostId(postId)
 {
     document.write(postId);
