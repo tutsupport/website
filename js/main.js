@@ -877,6 +877,7 @@ function atRP3()
 
 
 
+ 
  function loadAds()
  {
      setTimeout(function()
@@ -888,8 +889,6 @@ function atRP3()
  function atRP()
  {
     if($('.posts article.google-auto-placed').length == 0) return;
-    setTimeout(function()
-    {
     var windowW = window.innerWidth;
     if((windowW>544) && (windowW<=810))
     {
@@ -899,8 +898,6 @@ function atRP3()
     {
         atRP3();
     }
-    
-    },2000);
  }
  
  function getClass(e)
