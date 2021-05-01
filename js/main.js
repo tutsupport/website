@@ -657,7 +657,7 @@ function atRP()
         }
     }
 }
-
+/*
 function atRP3()
 {
     if($('.posts article.google-auto-placed').length == 0) return;
@@ -751,4 +751,124 @@ function atRP3()
         }
     }
 }
+*/
+
+
+
+function atRP3()
+{
+    if($('.posts article.google-auto-placed').length == 0) return;
+    var posts = $('.posts article');//[6].getAttribute("class");
+    var counts = posts.length;
+    //console.log(posts);
+    var i=0;
+    var vt = -1;
+    var adstring = "<article class='adpost'>"
+    + "<!-- start adsbygoogle code -->"
+    + "<!-- inlineAds -->"
+    + "<ins class='adsbygoogle'"
+    + "style='display:block'"
+    + "data-ad-format='fluid'"
+    + "data-ad-layout-key='-6t+ed+2i-1n-4w'"
+    + "data-ad-client='ca-pub-7829978247024975'"
+    + "data-ad-slot='5664771281'>"
+    + "</ins>"
+    + "<script>"
+    + "setTimeout(function()"
+    + "{"
+    + "    (adsbygoogle = window.adsbygoogle || []).push({});"
+    + "}, 1800);"
+                    
+    + "</script>"
+    + "<!-- end adsbygoogle code -->"
+    + "</article>";
+
+    while (i<counts)
+    {
+        var pcurrent = posts[i];
+        var clcurrent = getClass(pcurrent);
+        if(clcurrent == 'google-auto-placed')
+        {
+            i = i + 1;
+        }
+        else
+        {
+            if(i<counts-2)
+            {
+                var pnext1 = posts[i+1];
+                var clnext1 = getClass(pnext1);
+                if(clnext1 == 'google-auto-placed')
+                {
+                    pcurrent.style='width:100%';
+                    i = i + 2;
+                }
+                else
+                {
+                    var pnext2 = posts[i+2];
+                    var clnext2 = getClass(pnext2);
+                    if(clnext2 == 'google-auto-placed')
+                    {
+                        if(clnext1 !='adpost' && clcurrent!='adpost')
+                        {
+                            pcurrent.style= 'width:50%';
+                            pnext1.style='width:50%';
+                        }
+                        else if(clnext1 == 'adpost' && clcurrent != 'adpost')
+                        {
+                            //pcurrent.style= 'width:55%; padding: 0 7.5px 15px 25px';
+                            pcurrent.insertAdjacentHTML("beforebegin", adstring);
+                        }
+                        else if(clnext1 != 'adpost' && clcurrent == 'adpost')
+                        {
+                            //pnext1.style = 'width:55%; padding: 0 7.5px 15px 25px';
+                            pnext1.insertAdjacentHTML("beforebegin", adstring);
+                        }
+                        
+                    }
+                    else
+                    {
+
+                    }
+                    i = i + 3;
+                }
+            }
+            else
+            {
+                var ppre1 = posts[i-1];
+                var clpre1 = getClass(ppre1);
+                if(clpre1 == 'google-auto-placed')
+                {
+                    pcurrent.style='width:100%';
+                    i = i + 1;
+                }
+                else
+                {
+                    var ppre2 = posts[i-2];
+                    var clpre2 = getClass(ppre2);
+
+                    if(clpre2 == 'google-auto-placed')
+                    {
+                        if(ppre1 !='adpost' && clcurrent!='adpost')
+                        {
+                            pcurrent.style= 'width:50%';
+                            ppre1.style='width:50%';
+                        }
+                        else if(ppre1 == 'adpost' && clcurrent != 'adpost')
+                        {
+                            //pcurrent.style= 'width:55%';//width:calc(200%/3)';
+                            pcurrent.insertAdjacentHTML("beforebegin", adstring);
+                        }
+                        else if(ppre1 != 'adpost' && clcurrent == 'adpost')
+                        {
+                            //ppre1.style = 'width:55%';//width:calc(200%/3)';
+                            ppre1.insertAdjacentHTML("beforebegin", adstring);
+                        }
+                    }
+                    i = i + 1;
+                }
+            }
+        }
+    }
+}
+
 //atRP3();
