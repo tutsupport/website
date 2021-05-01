@@ -879,6 +879,7 @@ function atRP3()
 
  
   
+  
  function loadAds()
  {
      setTimeout(function()
@@ -890,14 +891,20 @@ function atRP3()
  function atRP()
  {
     
-    var windowW = window.innerWidth;
-    if((windowW>544) && (windowW<=810))
+    setTimeout(function()
     {
-        atRP2();
-    }
-    else if((windowW>810) && (windowW<=1194))
-    {
-        atRP3();
+        if($('.posts article.google-auto-placed').length == 0) return;
+        var windowW = window.innerWidth;
+        if((windowW>544) && (windowW<=810))
+        {
+            atRP2();
+        }
+        else if((windowW>810) && (windowW<=1194))
+        {
+            atRP3();
+        }
+        
+        },2000);
     }
  }
  
@@ -908,7 +915,7 @@ function atRP3()
  
 function atRP2()
 {
-    if($('.posts article.google-auto-placed').length == 0) return;
+    
     var posts = $('.posts article');//[6].getAttribute("class");
     var counts = posts.length;
     //console.log(posts);
@@ -1083,7 +1090,7 @@ function atRP3()
 
 
 //atRP3();
-/*
+
 
 
 function atRP4()
@@ -1096,5 +1103,5 @@ function atRP4()
     console.log('adpost : ' + adpost.length);
     console.log('posts : ' + posts.length);
 }
-*/
+
 //atRP4();
