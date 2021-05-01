@@ -760,8 +760,8 @@ function loadAds()
     setTimeout(function()
     {
        (adsbygoogle = window.adsbygoogle || []).push({})
-    }, 1800);
-} 
+    }, 1000);
+}
 function atRP3()
 {
     if($('.posts article.google-auto-placed').length == 0) return;
