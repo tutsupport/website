@@ -889,15 +889,15 @@ function atRP3()
         if((windowW>544) && (windowW<=810))
         {
             atRP2();
-            createAds();
-            createAds();
+            createAds(2);
+            createAds(2);
         }
         else if((windowW>810) && (windowW<=1194))
         {
             atRP3();
-            createAds();
-            createAds();
-            createAds();
+            createAds(3);
+            createAds(3);
+            createAds(3);
         }
         else
         {
@@ -1091,9 +1091,10 @@ function atRP3()
     }
 }
 
-function createAds()
+function createAds(col)
 {
-    var adstring = "<article class = 'adspost'>"
+    var adstring = "<div class ='main-wrapper'>"
+    + "<article class = 'adspost' style='width:calc(100%/"+col+"'>"
     + "<!-- start adsbygoogle code -->"
     + "<!-- inlineAds -->"
     + "<ins class='adsbygoogle'"
@@ -1104,11 +1105,14 @@ function createAds()
     + "data-ad-slot='5664771281'>"
     + "</ins>"
     + "<!-- end adsbygoogle code -->"
-    + "</article>";
+    + "</article>"
+    + "</div>"
 
     var divadsbygoogletop = $('#adsbygoogle-top');
-    divadsbygoogletop.insertAdjacentHTML("afterend", adstring);
+    divadsbygoogletop[0].insertAdjacentHTML("afterend", adstring);
+    loadAds();
 }
+//createAds()
 
 function atRP4()
 {
