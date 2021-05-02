@@ -1093,8 +1093,7 @@ function atRP3()
 
 function createAds(col)
 {
-    var adstring = "<div class ='main-wrapper'>"
-    + "<article class = 'adspost' style='width:calc(100%/"+col+"'>"
+    var adstring = "<article class = 'adspost' style='width:calc(100%/"+col+"'>"
     + "<!-- start adsbygoogle code -->"
     + "<!-- inlineAds -->"
     + "<ins class='adsbygoogle'"
@@ -1106,13 +1105,15 @@ function createAds(col)
     + "</ins>"
     + "<!-- end adsbygoogle code -->"
     + "</article>"
-    + "</div>"
+    
 
     var divadsbygoogletop = $('#adsbygoogle-top');
     divadsbygoogletop[0].insertAdjacentHTML("afterend", adstring);
     loadAds();
 }
-//createAds()
+//createAds(3)
+//createAds(3)
+//createAds(3)
 
 function atRP4()
 {
