@@ -889,10 +889,15 @@ function atRP3()
         if((windowW>544) && (windowW<=810))
         {
             atRP2();
+            createAds();
+            createAds();
         }
         else if((windowW>810) && (windowW<=1194))
         {
             atRP3();
+            createAds();
+            createAds();
+            createAds();
         }
         else
         {
@@ -1084,6 +1089,25 @@ function atRP3()
             }
         }
     }
+}
+
+function createAds()
+{
+    var adstring = "<article class = 'adspost'>"
+    + "<!-- start adsbygoogle code -->"
+    + "<!-- inlineAds -->"
+    + "<ins class='adsbygoogle'"
+    + "style='display:block'"
+    + "data-ad-format='fluid'"
+    + "data-ad-layout-key='-6t+ed+2i-1n-4w'"
+    + "data-ad-client='ca-pub-7829978247024975'"
+    + "data-ad-slot='5664771281'>"
+    + "</ins>"
+    + "<!-- end adsbygoogle code -->"
+    + "</article>";
+
+    var divadsbygoogletop = $('#adsbygoogle-top');
+    divadsbygoogletop.insertAdjacentHTML("afterend", adstring);
 }
 
 function atRP4()
