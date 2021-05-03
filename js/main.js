@@ -1122,9 +1122,7 @@ function createAds(col)
     divadsbygoogletop[0].insertAdjacentHTML("afterend", adstring);
     loadAds();
 }
-createAds(3)
-createAds(3)
-createAds(3)
+
 
 function atRP4()
 {
