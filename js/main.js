@@ -897,7 +897,7 @@ function atRP3()
             {
                 createAds(1);
             }
-            else if((windowW>700) && (windowW<=810))
+            else if((windowW>710) && (windowW<=810))
             {
                 createAds(2);
             }
