@@ -889,8 +889,18 @@ function atRP3()
         if((windowW>544) && (windowW<=810))
         {
             atRP2();
-            createAds(2);
-            createAds(2);
+            if((windowW>544) && (windowW<=600))
+            {
+                createAds(2);
+            }
+            else if((windowW>600) && (windowW<=650))
+            {
+                createAds(1);
+            }
+            else if((windowW>700) && (windowW<=810))
+            {
+                createAds(2);
+            }
         }
         else if((windowW>810) && (windowW<=1194))
         {
@@ -906,6 +916,7 @@ function atRP3()
         
     },2000);
  }
+ atRP()
  
  function getClass(e)
  {
