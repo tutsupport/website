@@ -891,23 +891,23 @@ function atRP3()
             atRP2();
             if((windowW>544) && (windowW<=600))
             {
-                createAds(2);
+                //createAds(2);
             }
             else if((windowW>600) && (windowW<=650))
             {
-                createAds(1);
+                //createAds(1);
             }
             else if((windowW>710) && (windowW<=810))
             {
-                createAds(2);
+                //createAds(2);
             }
         }
         else if((windowW>810) && (windowW<=1194))
         {
             atRP3();
-            createAds(3);
-            createAds(3);
-            createAds(3);
+            //createAds(3);
+            //createAds(3);
+            //createAds(3);
         }
         else
         {
