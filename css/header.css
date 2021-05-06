@@ -701,6 +701,10 @@
                 {
                          padding-top: 0px; 
                 }
+                
+                #Header1 {
+    width: 100%;
+}
           #backer, .main-wrapper
           {
             width: calc(100%);
@@ -852,10 +856,7 @@
 
         @media screen and (max-width:360px)
         {
-          #Header1
-          {
-            width:110px;
-          }
+          
         }
 
         @media screen and (max-width:320px)
