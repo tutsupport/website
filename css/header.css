@@ -746,9 +746,11 @@
             width: max-device-width;/*100%;*/
             min-width:50px;
             max-width:max-device-width; 
-            min-height:100px;
-            max-height:180px;
-            height:100%;
+            /*
+                  min-height:100px;
+                  max-height:180px;
+            */
+            height:180px;
           }
 
           .adslot_homepage 
