@@ -713,7 +713,7 @@
           }
           .right-wrapper 
           {
-            position: fixed;
+            position: static;
             width:100%;
             top:50px;
             left:0px;
