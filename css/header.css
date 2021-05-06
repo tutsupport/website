@@ -589,20 +589,20 @@
           .footer-copyright .widget{width:100%}
           .footer-copyright .socialList{display:block;float:none;padding-top:8px}
 
-          .right-wrapper 
+          .right-wrapper, .left-wrapper 
           {
             position: fixed;
-            width:135px;
+            width:140px;
             bottom: 0;
+          }
+          .right-wrapper 
+          {
             right:0px;
           }
 
           .left-wrapper 
           {
-            position: fixed;
-            width:135px;
-            bottom: 0;
-            left:1px;
+            left:0px;
           }
 
           #backer, .main-wrapper
