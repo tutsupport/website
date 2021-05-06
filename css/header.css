@@ -3,7 +3,7 @@
 {
         .right-wrapper, .left-wrapper
         { 
-                top:0px;
+                top:60px;
         }
 }
 @media screen and (max-width:1440px)
