@@ -48,6 +48,7 @@
           }
           .posts .post, .adpost
             {
+              padding: 0px 0 10px 0;
               width:calc(100%/3);
             }
             /*.adsbygoogles*/ .adspost
