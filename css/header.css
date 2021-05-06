@@ -1,4 +1,11 @@
 
+@media screen and (min-height:610px)
+{
+        .right-wrapper, .left-wrapper
+        { 
+                top:0px;
+        }
+}
 @media screen and (max-width:1440px)
         {
           #bvgy-right
