@@ -733,7 +733,7 @@
           .adslotright_1 
           { 
             display:block;
-            width: 100%;
+            width: max-device-width;/*100%;*/
             min-width:50px;
             max-width:max-device-width;
             height:150px;
