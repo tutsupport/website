@@ -573,6 +573,13 @@
 
         @media screen and (max-width:600px)
         {
+          #backer .backer-right 
+          {
+            display: none;
+          }
+                #Header1 {
+    width: 100%;
+}
           #backer .header{width:auto}
           #backer .header .BlogSearch{display:none}
           #backer .list-label-widget-content li.search{display:block}
@@ -643,7 +650,9 @@
 
         @media screen and (max-width:480px)
         {
-          
+          #Header1 {
+    width: 100%;
+}
           .right-wrapper 
           {
             position: fixed;
