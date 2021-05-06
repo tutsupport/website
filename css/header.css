@@ -697,6 +697,10 @@
         
         @media screen and (max-width:414px)
         {
+                .main-container.top 
+                {
+                         padding-top: 55px; 
+                }
           #backer, .main-wrapper
           {
             width: calc(100%);
