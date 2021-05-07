@@ -250,7 +250,7 @@
 
             #backer, .main-wrapper
             {
-                width: calc(100% - 240px);
+                width: calc(100% - 120px);
                 margin-left:115px;
             }
 
