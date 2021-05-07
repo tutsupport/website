@@ -13,7 +13,7 @@
             {
                 height:100%;
             }
-            .posts .post,.adpost
+            .posts .post,.adshomepage
             {
                 /*width:calc(100%/3);*/
             }
@@ -21,7 +21,7 @@
 
         @media screen and (max-width:1366px)
         {
-            .posts .post,.adpost
+            .posts .post,.adshomepage
             {
                 /*width:calc(100%/3);*/
             }
@@ -45,7 +45,7 @@
             {
                 padding:15px 5%;
             }
-            .posts .post,.adpost{width: calc(98%/3);}
+            .posts .post,.adshomepage{width: calc(98%/3);}
             .adspost{width: calc(98%/3);}
             
             .ads4
@@ -192,7 +192,7 @@
 
         @media screen and (max-width:980px)
         {
-            .posts .post,.adpost{width: 49%;}
+            .posts .post,.adshomepage{width: 49%;}
             .adspost{width: 49%;}
 
             .ads3,.ads4
@@ -308,7 +308,7 @@
                 max-height:290px;
             }
 
-            .posts .post,.adpost{width: 100%;}
+            .posts .post,.adshomepage{width: 100%;}
             .adspost{width: 98%;}
 
             .ads2,.ads3,.ads4
