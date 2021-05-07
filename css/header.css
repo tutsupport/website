@@ -236,22 +236,22 @@
             #Header1{width:125px}
             #backer .header .BlogSearch{width:56%}
             
-            .right-wrapper, .left-wrapper 
+            .right-wrapper/*, .left-wrapper */
             {
                 position: fixed;
-                width:120px;
+                width:140px;
                 bottom: 0;
             }
 
             .right-wrapper {right:0px;}
             
-            .left-wrapper {left:0px;}
+            .left-wrapper {left:0px; display:none;}
 
 
             #backer, .main-wrapper
             {
-                width: calc(100% - 120px);
-                margin-left:115px;
+                width: calc(100% - 140px);
+                /*margin-left:115px;*/
             }
 
             .adslotright_1 
