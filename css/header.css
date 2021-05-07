@@ -308,34 +308,22 @@
             #backer .header{width:88%}
             #Header1{width:125px}
             #backer .header .BlogSearch{width:56%}
-            .right-wrapper 
+            .right-wrapper, .left-wrapper 
             {
                 position: fixed;
-                width:140px;
+                width:120px;
                 bottom: 0;
-            }
-            
-            .left-wrapper 
-            {
-                position: fixed;
-                width:140px;
-                bottom: 0;
-            }
-            .right-wrapper 
-            {
-                right:0px;
             }
 
-            .left-wrapper 
-            {
-                left:0px;
-            }
+            .right-wrapper {right:0px;}
+            
+            .left-wrapper {left:0px;}
 
 
             #backer, .main-wrapper
             {
-                width: calc(100% - 280px);
-                margin-left:135px;
+                width: calc(100% - 240px);
+                margin-left:115px;
             }
 
             .adslotright_1 
@@ -348,7 +336,7 @@
             .adslot_homepage 
             { 
                 display:inline-block;
-                width:50%;;
+                width:50%;
                 /*
                     min-width:50px;
                     max-width:max-device-width;
@@ -373,21 +361,16 @@
 
         @media screen and (max-width:710px)
         {
-            .right-wrapper 
+            .right-wrapper, .left-wrapper 
             {
                 position: fixed;
                 width:140px;
                 bottom: 0;
-                right:0px;
             }
+
+            .right-wrapper {right:0px;}
             
-            .left-wrapper 
-            {
-                position: fixed;
-                width:140px;
-                bottom: 0;
-                left:0px;
-            }
+            .left-wrapper {left:0px;}
 
 
             #backer, .main-wrapper
