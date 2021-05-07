@@ -251,7 +251,7 @@
             #backer, .main-wrapper
             {
                 width: calc(100% - 140px);
-                /*margin-left:115px;*/
+                margin-left:0px;
             }
 
             .adslotright_1 
