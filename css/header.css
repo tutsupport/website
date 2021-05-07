@@ -45,10 +45,8 @@
             {
                 padding:15px 5%;
             }
-            .posts .post,.adpost
-            {
-                width:calc(100%/3);
-            }
+            .posts .post,.adpost{width: calc(100%/3);}
+            .adspost{width: calc(98%/3);}
             
             .ads4
             {
@@ -61,15 +59,6 @@
             .main-container{padding:0 20px;}
             .footer-copyright.main-container{padding:15px 20px}
             #bvgy-right{height:100%;}
-            .posts .post,.adpost
-            {
-                width:calc(100%/3);
-            }
-            
-            .ads4
-            {
-                display: none !important;
-            }
         }
 
         @media screen and (max-width:1128px)
@@ -77,15 +66,6 @@
             .main-container{padding:0 20px;}
             .footer-copyright.main-container{padding:15px 20px}
             #bvgy-right{height:100%;}
-            .posts .post,.adpost
-            {
-                width:calc(100%/3);
-            }
-
-            .ads4
-            {
-                display: none !important;
-            }
         }
 
         @media screen and (max-width:1024px)
@@ -105,15 +85,6 @@
             #bvgy-right
             {
                 height:100%;
-            }
-            .posts .post,.adpost
-            {
-                width:calc(100%/3);
-            }
-
-            .ads4
-            {
-                display: none !important;
             }
 
             #AdSense1, #AdSense2 ,#AdSense3, #AdSense4,#AdSense5,#AdSense6,#AdSense7,#AdSense8,#AdSense9,#AdSense10
@@ -150,15 +121,6 @@
             {
                 /*width:calc(100%/4);*/
                 /*width:calc(100%/3);*/
-            }
-            .posts .post,.adpost
-            {
-                width:calc(100%/3);
-            }
-
-            .ads4
-            {
-                display: none !important;
             }
 
             #bvgy-right
@@ -226,23 +188,12 @@
                 background-color:#3c4043
             }
 
-            .posts .post,.adpost
-            {
-                width:calc(100%/3);
-            }
-
-            .ads4
-            {
-                display: none !important;
-            }
         }
 
         @media screen and (max-width:980px)
         {
-            .posts .post,.adpost
-            {
-                width: 50%;
-            }
+            .posts .post,.adpost{width: 50%;}
+            .adspost{width: 49%;}
 
             .ads3,.ads4
             {
@@ -262,16 +213,6 @@
             {
                 width: 75%;
             }
-
-            .posts .post,.adpost
-            {
-                width: 50%;
-            }
-
-            .ads3,.ads4
-            {
-                display: none !important;
-            }
         }
 
         @media screen and (max-width:768px)
@@ -290,16 +231,6 @@
             .main-wrapper
             {
                 width: 75%;
-            }
-
-            .posts .post,.adpost
-            {
-                width: 50%;
-            }
-
-            .ads3,.ads4
-            {
-                display: none !important;
             }
         }
 
@@ -345,16 +276,6 @@
                 min-height:50px;
                 max-height:290px;
             }
-
-            .posts .post,.adpost
-            {
-                width: 50%;
-            }
-
-            .ads3,.ads4
-            {
-                display: none !important;
-            }
         }
 
 /*====================================================================================*/
@@ -397,10 +318,8 @@
                 max-height:290px;
             }
 
-            .posts .post,.adpost
-            {
-                width: 100%;
-            }
+            .posts .post,.adpost{width: 100%;}
+            .adspost{width: 98%;}
 
             .ads2,.ads3,.ads4
             {
@@ -450,20 +369,7 @@
                 min-height:50px;
                 max-height:290px;
             }
-
-            .posts .post,.adpost
-            {
-                width: 100%;
-            }
-
-            .ads2,.ads3,.ads4
-            {
-                display: none !important;
-            }
         }
-
-
-
 
 
         @media screen and (max-width:640px)
@@ -503,16 +409,6 @@
                 height:100%;
                 min-height:50px;
                 max-height:290px;
-            }
-
-            .posts .post,.adpost
-            {
-                width: 100%;
-            }
-
-            .ads2,.ads3,.ads4
-            {
-                display: none !important;
             }
         }
 
@@ -570,16 +466,6 @@
                 min-height:50px;
                 max-height:290px;
             }
-
-            .posts .post,.adpost
-            {
-                width: 100%;
-            }
-
-            ads2,.ads3,.ads4
-            {
-                display: none !important;
-            }
         }
 
 
@@ -620,12 +506,7 @@
                 height:100%;
                 min-height:50px;
                 max-height:290px;
-            }
-
-            .posts .post,.adpost
-            {
-                width: 100%;
-            }
+            }            
         }
 
 
@@ -678,10 +559,7 @@
                 max-height:290px;
             }
 
-            .posts .post,.adpost
-            {
-                width: 100%;
-            }
+            
 
             .post-footer{padding-top:20px;}
             .post-button-container
