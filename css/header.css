@@ -45,8 +45,8 @@
             {
                 padding:15px 5%;
             }
-            .posts .post,.adshomepage{width: calc(98%/3);}
-            .adspost{width: calc(98%/3);}
+            .posts .post,.adshomepage{width: calc(100%/3);}
+            .adspost{width: 100%;}
             
             .ads4
             {
@@ -192,8 +192,8 @@
 
         @media screen and (max-width:980px)
         {
-            .posts .post,.adshomepage{width: 49%;}
-            .adspost{width: 49%;}
+            .posts .post,.adshomepage{width: 50%;}
+            .adspost{width: 100%;}
 
             .ads3,.ads4
             {
@@ -309,7 +309,7 @@
             }
 
             .posts .post,.adshomepage{width: 100%;}
-            .adspost{width: 98%;}
+            .adspost{width: 100%;}
 
             .ads2,.ads3,.ads4
             {
