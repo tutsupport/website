@@ -44,17 +44,14 @@
 
         .adslot_homepage 
         { 
-            display:block;
-        }
-
-        .adslot_4 
-        { 
             display:inline-block;
-            width:160px;
-            height:600px;
+            width: 100%;
+            min-width:50px;
+            max-width:max-device-width;
+            min-height:50px;
+            max-height:250px;
+            height:100%;
         }
-
-
 
         @media screen and (min-height:610px)
         {
@@ -323,7 +320,7 @@
                 min-width:50px;
                 max-width:max-device-width;
                 min-height:50px;
-                max-height:200px;
+                max-height:250px;
                 height:100%;
             }
         }
@@ -348,7 +345,7 @@
                 min-width:50px;
                 max-width:max-device-width;
                 min-height:50px;
-                max-height:290px;
+                max-height:250px;
                 height:100%;
             }
 
