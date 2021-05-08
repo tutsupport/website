@@ -61,7 +61,7 @@
             .posts .post,.adshomepage{width: calc(96%/3);}
         }
 
-        @media screen and (max-width:1366px)
+        @media screen and (max-width:1440px)
         {
             .bvgy-item 
             {
