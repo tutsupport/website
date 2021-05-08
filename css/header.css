@@ -51,11 +51,18 @@
             height:250px;
         }
 
-        @media screen and (min-height:610px)
+
+
+
+        @media screen and (max-width:1600px)
         {
-            .right-wrapper, .left-wrapper
-            { 
-                top:60px;
+            #bvgy-right
+            {
+                height:100%;
+            }
+            .posts .post,.adshomepage
+            {
+                width:calc(96%/3);
             }
         }
 
@@ -518,4 +525,12 @@
           .footer-wrapper #box_channel .more{padding:10px 0 0 0}
           .footer-wrapper #box_label .more a,.footer-wrapper #box_label .more a:hover,.sidebar-wrapper #HTML9 .more a,.sidebar-wrapper #HTML9 .more a:hover,#bvgy-right .more a,#bvgy-right .more a:hover{color:rgb(136,136,136)}
           .footer-wrapper #box_channel .more a,.footer-wrapper #box_channel .more a:hover{color:red}
+        }
+
+        @media screen and (min-height:610px)
+        {
+            .right-wrapper, .left-wrapper
+            { 
+                top:60px;
+            }
         }
