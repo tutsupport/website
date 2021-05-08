@@ -17,7 +17,7 @@
         .posts .post, .adshomepage
         {
             padding: 0px 0 5px 5px;
-            width:24.8%;
+            width:calc(99%/4);
             display:inline-block;
             vertical-align:top;
             position:relative;
