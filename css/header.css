@@ -244,11 +244,11 @@
 
             .right-wrapper {right:0px;}
             
-            .left-wrapper {left:0px; /*display:none;*/}
+            .left-wrapper {left:0px; display:block;}
 
             #backer, .main-wrapper
             {
-                width: calc(100% - 120px);
+                width: calc(100% - 240px);
                 margin-left:115px;
             }
 
