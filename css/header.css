@@ -238,18 +238,17 @@
             .right-wrapper, .left-wrapper
             {
                 position: fixed;
-                width:115px;
+                width:120px;
                 top:0px
             }
 
             .right-wrapper {right:0px;}
             
-            .left-wrapper {left:0px; /*display:none;*/}
-
+            .left-wrapper {left:0px; display:none;}
 
             #backer, .main-wrapper
             {
-                width: calc(100% - 230px);
+                width: calc(100% - 120px);
                 margin-left:115px;
             }
 
@@ -279,10 +278,9 @@
             
             .left-wrapper {display:block;}
 
-
             #backer, .main-wrapper
             {
-                width: calc(100% - 280px);
+                width: calc(100% - 240px);
                 margin-left:135px;
             }
 
@@ -305,9 +303,6 @@
                 display: none !important;
             }
         }
-
-
-
 
         @media screen and (max-width:684px)
         {
