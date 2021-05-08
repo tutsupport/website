@@ -24,7 +24,7 @@
 
         .adspost{width: 100%;}
 
-        .right-wrapper, .left-wrapper
+        .ads-right-container, .ads-left-container
         {
             float:left;
             width:165px;
@@ -32,9 +32,9 @@
             top:60px;
         }
 
-        .right-wrapper {right:5px;}
+        .ads-right-container {right:5px;}
             
-        .left-wrapper {left:5px;}
+        .ads-left-container {left:5px;}
 
         .ads-right, .ads-left
         { 
@@ -43,7 +43,7 @@
             height:600px;
         }
 
-        .ads-homepage 
+        .ads-home 
         { 
             display:inline-block;
             width: 100%;
@@ -170,16 +170,16 @@
             #Header1{width:125px}
             #backer .header .BlogSearch{width:56%}
             
-            .right-wrapper, .left-wrapper
+            .ads-right-container, .ads-left-container
             {
                 position: fixed;
                 width:120px;
                 top:0px
             }
 
-            .right-wrapper {right:0px;}
+            .ads-right-container {right:0px;}
             
-            .left-wrapper {left:0px; display:block;}
+            .ads-left-container {left:0px; display:block;}
 
             #backer, .main-wrapper
             {
@@ -194,7 +194,7 @@
                 height:600px;
             }
 
-            .ads-homepage 
+            .ads-home 
             { 
                 display:inline-block;
                 width: 100%;
@@ -209,7 +209,7 @@
         @media screen and (max-width:710px)
         {
             
-            .left-wrapper {display:block;}
+            .ads-left-container {display:block;}
 
             #backer, .main-wrapper
             {
@@ -217,7 +217,7 @@
                 margin-left:120px;
             }
 
-            .ads-homepage 
+            .ads-home 
             { 
                 display:inline-block;
                 width: 100%;
@@ -261,7 +261,7 @@
 
         @media screen and (max-width:480px)
         {
-            .right-wrapper 
+            .ads-right-container 
             {
                 position: fixed;
                 width:150px;
@@ -270,7 +270,7 @@
                 left:0px;
             }
 
-            .left-wrapper {display: none;}
+            .ads-left-container {display: none;}
 
             #backer, .main-wrapper
             {
@@ -290,7 +290,7 @@
 
             #backer{position: relative;}
             
-            .right-wrapper 
+            .ads-right-container 
             {
                 position: static;
                 width:100%;
@@ -301,7 +301,7 @@
                 height:200px;
             }
 
-            .left-wrapper {display: none;}
+            .ads-left-container {display: none;}
 
             .ads-right 
             { 
@@ -387,7 +387,7 @@
 
         @media screen and (min-height:610px)
         {
-            .right-wrapper, .left-wrapper
+            .ads-right-container, .ads-left-container
             { 
                 top:60px;
             }
