@@ -73,20 +73,6 @@
             }
         }
 
-        @media screen and (max-width:1194px)
-        {
-            .main-container{padding:0 20px;}
-            .footer-copyright.main-container{padding:15px 20px}
-            #bvgy-right{height:100%;}
-        }
-
-        @media screen and (max-width:1128px)
-        {
-            .main-container{padding:0 20px;}
-            .footer-copyright.main-container{padding:15px 20px}
-            #bvgy-right{height:100%;}
-        }
-
         @media screen and (max-width:1024px)
         {
             .main-container
@@ -101,32 +87,7 @@
             {
                 content:unset;
             }
-            #AdSense1, #AdSense2 ,#AdSense3, #AdSense4,#AdSense5,#AdSense6,#AdSense7,#AdSense8,#AdSense9,#AdSense10
-            {
-                padding: 0 0px 0px 1.5px;
-                width: calc(100%/2);
-                display: inline-block;
-                vertical-align: top;
-                position: relative;
-            }
-
-            #HTML5,#HTML51,#HTML52,#HTML53 
-            {
-                padding: 0 0px 0px 1.5px;
-                width: calc(100%/2);
-                display: inline-block;
-                vertical-align: top;
-                position: relative;
-            }
-
-            .qc-adsense
-            {
-                padding: 0 7.5px 0px 7.5px;
-                width: 50% !important;
-                display: inline-block;
-                vertical-align: top;
-                position: relative;
-            }
+            .posts .post,.adshomepage{width: 49%;}
         }
 
         @media screen and (max-width:860px)
@@ -190,10 +151,7 @@
 
         }
 
-        @media screen and (max-width:980px)
-        {
-            .posts .post,.adshomepage{width: 49%;}
-        }
+        
 
 
         @media screen and (max-width:768px)
