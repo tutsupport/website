@@ -47,6 +47,11 @@
             height:250px;
         }
 
+        .footer-copyright.main-container
+        {
+            padding:15px 5%;
+        }
+
         @media screen and (max-width:1600px)
         {
             #bvgy-right
@@ -65,14 +70,6 @@
                 display: inline-block;
                 vertical-align: top;
                 position: relative;
-            }
-        }
-
-        @media screen and (max-width:1280px)
-        {
-            .footer-copyright.main-container
-            {
-                padding:15px 5%;
             }
         }
 
