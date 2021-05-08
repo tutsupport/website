@@ -18,9 +18,8 @@
         
         .posts .post, .adshomepage
         {
-            /*padding: 0 0px 7.5px 7.5px;*/
             padding: 0px 0 5px 5px;
-            width:25%;
+            width:24.8%;
             display:inline-block;
             vertical-align:top;
             position:relative;
@@ -31,7 +30,7 @@
             float:left;
             width:165px;
             position: fixed;
-            top:1px;
+            top:60px;
         }
 
         .right-wrapper {right:5px;}
