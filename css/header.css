@@ -244,7 +244,7 @@
 
             .right-wrapper {right:0px;}
             
-            .left-wrapper {left:0px; display:none;}
+            .left-wrapper {left:0px; /*display:none;*/}
 
             #backer, .main-wrapper
             {
