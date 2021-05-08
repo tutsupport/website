@@ -238,7 +238,7 @@
             .right-wrapper, .left-wrapper
             {
                 position: fixed;
-                width:120px;
+                width:115px;
                 top:0px
             }
 
@@ -249,8 +249,8 @@
 
             #backer, .main-wrapper
             {
-                width: calc(100% - 240px);
-                margin-left:0px;
+                width: calc(100% - 230px);
+                margin-left:115px;
             }
 
             .adslotright_1 
