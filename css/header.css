@@ -1,5 +1,3 @@
-        
-        
         .main-wrapper
         {
             float:left;
@@ -37,16 +35,11 @@
             
         .left-wrapper {left:5px;}
 
-        .adslotright_1 
+        .ads-right, .ads-left
         { 
             display:inline-block;
             width:160px;
             height:600px;
-        }
-
-        .adslotright_2 
-        { 
-            display:inline-block;
         }
 
         .adslot_homepage 
@@ -316,7 +309,7 @@
                 margin-left:115px;
             }
 
-            .adslotright_1 
+            .ads-right
             { 
                 display:block;
                 width: 100%;
@@ -438,7 +431,7 @@
 
             .left-wrapper {display: none;}
 
-            .adslotright_1 
+            .ads-right 
             { 
                 display:inline-block;
                 width: max-device-width;/*100%;*/
