@@ -17,6 +17,11 @@
             position:relative;
         }
 
+        .posts 
+        {
+            text-align: center;
+        }
+
         .adspost{width: 100%;}
 
         .right-wrapper, .left-wrapper
@@ -386,4 +391,4 @@
             { 
                 top:60px;
             }
-}
+        }
