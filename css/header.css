@@ -192,8 +192,7 @@
 
         @media screen and (max-width:980px)
         {
-            .posts .post,.adshomepage{width: 50%;}
-            .adspost{width: 100%;}
+            .posts .post,.adshomepage{width: 49%;}
 
             .ads3,.ads4
             {
@@ -268,7 +267,7 @@
                 min-width:50px;
                 max-width:max-device-width;
                 min-height:50px;
-                max-height:290px;
+                max-height:200px;
                 height:100%;
             }
         }
@@ -286,7 +285,7 @@
 
             .right-wrapper {right:0px;}
             
-            .left-wrapper {left:0px;}
+            .left-wrapper {left:0px; display:block;}
 
 
             #backer, .main-wrapper
