@@ -1,3 +1,68 @@
+        
+        
+        .main-wrapper
+        {
+            float:left;
+            width: calc(100% - 330px);
+            margin-left: 160px;
+        }
+        
+        .main-wrapper .widget{margin-bottom:15px}
+        .main-wrapper #HTML4{display:none}
+        
+        .posts
+        {
+            /*margin:0 -7.5px;*/
+            /*display:inline-table;*/
+        }
+        
+        .posts .post, .adshomepage
+        {
+            /*padding: 0 0px 7.5px 7.5px;*/
+            padding: 0px 0 5px 5px;
+            width:25%;
+            display:inline-block;
+            vertical-align:top;
+            position:relative;
+        }
+
+        .right-wrapper, .left-wrapper
+        {
+            float:left;
+            width:165px;
+            position: fixed;
+            top:1px;
+        }
+
+        .right-wrapper {right:5px;}
+            
+        .left-wrapper {left:5px;}
+
+        .adslotright_1 
+        { 
+            display:inline-block;
+            width:160px;
+            height:600px;
+        }
+
+        .adslotright_2 
+        { 
+            display:inline-block;
+        }
+
+        .adslot_homepage 
+        { 
+            display:block;
+        }
+
+        .adslot_4 
+        { 
+            display:inline-block;
+            width:160px;
+            height:600px;
+        }
+
+
 
         @media screen and (min-height:610px)
         {
