@@ -260,38 +260,31 @@ function loaddataBVXT(postId)
     gnumBVXT = posBVXTs.length;
     if(gnumBVXT>0)
     {
-        $.ajax('/p/bvxt-data.html', 
+        var i = 0;
+        //<![CDATA[
+        for(i=0 ;i<gnumBVXT;i++)
         {
-            dataType: 'html',
-        }).done(function(ajaxResult) 
-        {
-            
-            var doc = new DOMParser().parseFromString(ajaxResult, "text/html");
-            var dataBVXTs = doc.querySelectorAll('.p' + gPID);
-            var i = 0;
-            //<![CDATA[
-            for(i=0 ;i<gnumBVXT;i++)
+            var links;
+            var posBVXT = posBVXTs[i];
+            try
             {
-                var links;
-                try
+
+                links = posBVXT.getElementsByClassName('hidden-item')
+                if(links.length>=1)
                 {
-                    links = dataBVXTs[i].innerText.split("@");
-                    var link1 = links[1].trim();
-                    var link2 = links[2].trim();
-                    if(link1 != "N/A") getBVXTfromUrl(posBVXTs[i],link1);
-                    if(link2 != "N/A") getBVXTfromUrl(posBVXTs[i],link2);
-                }
-                catch
+                    getBVXTfromUrl(posBVXT,links[0].href);
+                } 
+                if(links.length==2)
                 {
+                    getBVXTfromUrl(posBVXT,links[1].href);
                 }
             }
-            //]]>
-            
-        });
+            catch
+            {
+            }
+        }
+        //]]>
     }
-    
-    //$(document).trigger('function_a_complete');
-    //$(document).bind('function_a_complete', ShowRecentPost());
 };
 function BVGYLeft()
 {
