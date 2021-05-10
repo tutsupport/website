@@ -269,7 +269,7 @@ function loaddataBVXT(postId)
             try
             {
 
-                links = posBVXT.getElementsByTagName('bvxt-link')
+                links = posBVXT.getElementsByClassName('bvxt-link')
                 if(links.length>=1)
                 {
                     getBVXTfromUrl(posBVXT,links[0].href);
@@ -286,6 +286,7 @@ function loaddataBVXT(postId)
         //]]>
     }
 };
+
 function BVGYLeft()
 {
     return getbvgy('bvgy-left');
