@@ -269,7 +269,7 @@ function loaddataBVXT(postId)
             try
             {
 
-                links = posBVXT.getElementsByClassName('hidden-item')
+                links = posBVXT.getElementsByTagName('bvxt-link')
                 if(links.length>=1)
                 {
                     getBVXTfromUrl(posBVXT,links[0].href);
