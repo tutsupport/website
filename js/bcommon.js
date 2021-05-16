@@ -97,6 +97,7 @@ function createplacesdata()
     $("#bcommon-places").html(JSON.stringify(data));
 }
 
+
 function createpersonsdata()
 {
     var data = 
