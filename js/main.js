@@ -1,4 +1,5 @@
 
+var mm=000;
 var year = '2021';
 var month = '04';
 var numedit = 2;
