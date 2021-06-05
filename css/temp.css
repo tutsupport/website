@@ -1,0 +1,597 @@
+    .box-detail {
+        background: #10ea611c;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 16px;
+        border-radius: 8px;
+        font-size: 18px;
+    }
+    
+    .box-detail .video {
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .video img {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        border: 0;
+    }
+    
+    .box-detail h1 {
+        display: block;
+        overflow: hidden;
+        padding: 14px 24px;
+        font-size: 32px;
+        line-height: 155%;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    .box-detail h2 {
+        display: block;
+        overflow: hidden;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 155%;
+        padding: 14px 16px;
+    }
+    
+    .box-detail .rate-view {
+        display: block;
+        overflow: hidden;
+        text-align: center;
+    }
+    
+    .rate-view .count-view {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .vaobep-bigeye {
+        background-position: -184px -68px;
+        width: 19px;
+        height: 13px;
+    }
+    
+    [class^="vaobep-"],
+    [class*="vaobep-"] {
+        background-image: url(https://1.bp.blogspot.com/-EbfwXce_swA/YLjJV2rE-HI/AAAAAAAAArY/yvWeMKo3qm0J4cauEfh-wRPqkRjD5PirACPcBGAYYCw/s320/vaobepdesktop.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+        vertical-align: middle;
+        background-size: 206px 92px;
+    }
+    
+    .rate-view span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 16px;
+        color: #666;
+        height: 20px;
+        line-height: 155%;
+    }
+    
+    .box-detail .ready {
+        display: block;
+        overflow: hidden;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    .ready li {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 30px;
+        position: relative;
+    }
+    
+    .box-detail .ready h2 {
+        font-size: 16px;
+        line-height: 155%;
+        color: #333;
+        padding: 10px 0 5px;
+    }
+    
+    .ready li span {
+        display: block;
+        overflow: hidden;
+        padding: 5px 0;
+        text-align: center;
+        font-size: 16px;
+        line-height: 155%;
+    }
+    
+    .box-detail .leadpost {
+        display: block;
+        overflow: hidden;
+        margin: 15px;
+    }
+    
+    .leadpost p {
+        display: block;
+        overflow: hidden;
+        color: #333;
+    }
+    
+    .leadpost p a {
+        color: #4a90e2;
+    }
+    
+    /*.list-recipe.active {}*/
+    
+    .box-detail .list-recipe {
+        display: block;
+        overflow: hidden;
+        background: #edf5ff;
+        margin: 10px 15px 20px;
+        border: 1px solid #0088f2;
+        border-radius: 4px;
+        height: auto;
+    }
+    
+    .list-recipe .btn-recipe {
+        cursor: pointer;
+    }
+    
+    .list-recipe span {
+        display: block;
+        overflow: hidden;
+        font-weight: 600;
+        padding: 7px 10px;
+        position: relative;
+    }
+    
+    .list-recipe ul {
+        display: block;
+        overflow: hidden;
+    }
+    
+    .list-recipe ul li {
+        display: block;
+        overflow: hidden;
+    }
+    
+    .list-recipe ul li a {
+        display: block;
+        overflow: hidden;
+        color: #4a90e2;
+        padding: 0 10px 5px;
+    }
+    
+    .box-detail .staple {
+        display: block;
+        overflow: hidden;
+        padding: 10px 0;
+    }
+    
+    .box-detail h2 {
+        display: block;
+        overflow: hidden;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 155%;
+        padding: 14px 16px;
+    }
+    
+    .staple h2 {
+        display: block;
+        overflow: hidden;
+        font-size: 20px;
+        line-height: 24px;
+        color: #333;
+        padding: 10px 24px;
+        font-weight: 600;
+    }
+    
+    .staple h2 small {
+        font-size: 16px;
+        color: #666;
+        float: right;
+        font-weight: 400;
+        position: relative;
+    }
+    
+    .staple h2 small i {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 4px;
+        position: absolute;
+        left: -20px;
+        top: 3px;
+    }
+    
+    .vaobep-people {
+        background-position: -124px -43px;
+        width: 15px;
+        height: 17px;
+    }
+    
+    .staple span {
+        display: block;
+        overflow: hidden;
+        padding: 8px 24px;
+    }
+    
+    .staple span small {
+        margin-left: 5px;
+        font-size: 14px;
+        color: #666;
+        font-size: 14px;
+    }
+    
+    .box-detail .perform {
+        display: block;
+        overflow: hidden;
+        padding: 20px 20px 5px;
+    }
+    
+    .box-detail .perform h2,
+    .box-detail .perform h3 {
+        display: block;
+        overflow: hidden;
+        padding: 0;
+        font-size: 18px;
+        line-height: 155%;
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    
+    .box-detail .perform>p {
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+    .box-detail .perform>ul li {
+        display: block;
+        overflow: hidden;
+        padding: 0 5px 10px 20px !important;
+        position: relative;
+        color: #333;
+        font-size: 18px;
+        line-height: 155%;
+    }
+    
+    .detail .infobox {
+        display: block;
+        overflow: hidden;
+        margin: 0 5px 20px 0;
+        background: #edf5ff;
+        border: 1px solid #0088f2;
+        border-radius: 4px;
+        padding: 10px 15px 0;
+        color: #333;
+    }
+    
+    .detail .infobox>p {
+        margin: 0 0 10px;
+    }
+    
+    .box-detail .method {
+        display: block;
+        overflow: hidden;
+    }
+    
+    .method h2 {
+        display: block;
+        overflow: hidden;
+        padding: 16px 24px 10px;
+        font-size: 20px;
+        line-height: 24px;
+        color: #333;
+        font-weight: 600;
+    }
+    
+    .method ul {
+        display: block;
+        overflow: hidden;
+    }
+    
+    .method ul li {
+        display: block;
+        overflow: hidden;
+        padding: 10px 24px;
+    }
+    
+    .method li label {
+        float: left;
+        color: #333;
+        background: #ddd;
+        border-radius: 4px;
+        padding: 5px 12px;
+        margin-right: 16px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .method li .howtostep {
+        display: block;
+        overflow: hidden;
+    }
+    
+    .method li .howtostep .howtostep-name h3 {
+        display: block;
+        overflow: hidden;
+        font-weight: 600;
+        padding: 5px 0 10px;
+        color: #333;
+        font-size: 18px;
+        line-height: 155%;
+    }
+    
+    .method h3 {
+        display: block;
+        overflow: hidden;
+        padding: 16px 24px 10px;
+        font-size: 20px;
+        line-height: 24px;
+        color: #333;
+        font-weight: 600;
+    }
+    
+    .method li .howtostep .howtostep-text>p {
+        display: block;
+        overflow: hidden;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    .detail .tipsrecipe {
+        background: #f1f7ff;
+        border: .5px dashed #4a90e2;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 10px 0 0 30px;
+        margin: 0 5px 20px 0;
+        position: relative;
+    }
+    
+    .vaobep-machban {
+        background-position: -136px -11px;
+        width: 15px;
+        height: 20px;
+        margin: -3px 5px 0 0 !important;
+    }
+    
+    .vaobep-machban {
+        background-position: -136px -11px;
+        width: 15px;
+        height: 20px;
+        margin: -3px 0 0 0 !important;
+        position: absolute;
+        left: 10px;
+        top: 13px;
+    }
+    
+    [class^="vaobep-"],
+    [class*="vaobep-"] {
+        background-image: url(https://1.bp.blogspot.com/-EbfwXce_swA/YLjJV2rE-HI/AAAAAAAAArY/yvWeMKo3qm0J4cauEfh-wRPqkRjD5PirACPcBGAYYCw/s320/vaobepdesktop.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+        vertical-align: middle;
+        background-size: 206px 92px;
+    }
+    
+    .detail .tipsrecipe>p {
+        margin-bottom: 10px;
+    }
+    
+    .method li .howtostep .box-gallery {
+        margin-top: 0px;
+    }
+    
+    .method li .howtostep .img-method.twoitem {
+        width: calc(50% - 5px);
+        margin-right: 5px;
+        float: left;
+    }
+    
+    .method li .howtostep .img-method {
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: top;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    
+    .method li .howtostep .img-method.oneitem {
+        width: calc(100% - 5px);
+        min-width: 300px;
+    }
+    
+    .method li .img-method img {
+        display: block;
+        overflow: hidden;
+        border-radius: 4px;
+        width: 340px;
+        height: 340px;
+        object-fit: cover;
+    }
+    
+    .method li .firstItem.oneitem.img-method img,
+    .method li .firstItem.threeitem.img-method img {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        max-height: 450px;
+        object-fit: cover;
+    }
+    
+    img.lazy,
+    img[data-src] {
+        -ms-opacity: 0;
+        opacity: 0;
+        -webkit-transition: opacity .3s ease-in;
+        -moz-transition: opacity .3s ease-in;
+        -ms-transition: opacity .3s ease-in;
+        -o-transition: opacity .3s ease-in;
+        transition: opacity .3s ease-in;
+    }
+    
+    .box-detail.tipsnote {
+        padding: 20px;
+    }
+    
+    .generate-promotion-products {
+        border-top: 1px solid #f3f3f3;
+    }
+    
+    .box-detail.tipsnote>p {
+        margin-bottom: 20px;
+    }
+    
+    #dmxoverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        background: rgba(0, 0, 0, .75);
+        display: none;
+    }
+    
+    .popupGalleryStep {
+        background: #000;
+        text-align: center;
+        color: #fff;
+        display: none;
+        position: fixed;
+        top: 15%;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        opacity: 1;
+        width: 1030px;
+        margin: auto;
+        position: absolute;
+    }
+    
+    .popupGalleryStep .container-gallery {
+        overflow: auto;
+        margin-bottom: 5vh;
+        margin: auto;
+        background: #000;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    .popupGalleryStep .content-step {
+        width: 476px;
+        display: inline-block;
+        vertical-align: top;
+        background: #fff;
+        height: 550px;
+        color: #333;
+        overflow: auto;
+        font-size: 18px;
+        line-height: 155%;
+    }
+    
+    .popupGalleryStep .closePopGal {
+        height: 40px;
+        display: block;
+        position: relative;
+        background: #fff;
+        cursor: pointer;
+    }
+    
+    .popupGalleryStep .closePopGal .closePopGallery {
+        font-size: 16px;
+        color: #333;
+        font-weight: 300;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+    }
+    
+    .popupGalleryStep .mainStep {
+        padding: 10px 20px;
+    }
+    
+    .box-detail .food-similar {
+        display: block;
+        overflow: hidden;
+        padding-bottom: 20px;
+    }
+    
+    .food-similar h2 {
+        display: block;
+        overflow: hidden;
+        padding: 24px 24px 12px;
+        font-size: 22px;
+        line-height: 155%;
+        color: #333;
+        text-align: left;
+        font-weight: 600;
+    }
+    
+    .food-similar ul {
+        padding: 0 17px;
+    }
+    
+    .cate-cook {
+        display: flex;
+        flex-flow: row wrap;
+        overflow: hidden;
+    }
+    
+    .cate-cook li {
+        float: left;
+        width: 23%;
+        margin: 1% 1% 1% 1%;
+    }
+    
+    .cate-cook li a {
+        display: block;
+        overflow: hidden;
+    }
+    
+    .cate-cook li a .imgdish {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        height: 172px;
+        border-radius: 8px;
+    }
+    
+    .cate-cook li .imgdish img {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .cate-cook li a span {
+        display: block;
+        overflow: hidden;
+        font-size: 13px;
+        color: #666;
+        padding: 5px 0;
+    }
+    
+    .cate-cook li a strong {
+        overflow: hidden;
+        font-size: 16px;
+        color: #333;
+        line-height: 155%;
+        padding: 0 0 0;
+        height: 73px;
+        -webkit-line-clamp: 3;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
